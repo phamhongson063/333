@@ -1,0 +1,1767 @@
+# Sua text o dong ngay ben duoi moi dong bat dau bang '#'.
+# Khong sua cac dong '#' - chung chi de tra cuu.
+# File nay khong bao gio bi pipeline ghi de. Xoa file de bo het sua tay.
+# Sau khi sua, chay: run.py --stages qc,export --force
+# Text sua tay duoc dung nguyen van: tu viet so thanh chu, chi dung dau , . ! ? …
+#
+
+# sample_00000.wav  6.43s  ctc=0.90  daydu=1.03
+Chào mừng các bạn đến với kênh Hoàng Vinh Radio Hôm nay mời các bạn tiếp tục nghe bộ truyện Tạc miêu.
+
+# sample_00001.wav  5.85s  ctc=0.97  daydu=1.00
+của tác giả thiên hạ bá sướng Lại là một tác phẩm của thiên hạ bá sướng Tác giả.
+
+# sample_00002.wav  4.40s  ctc=0.89  daydu=1.00
+của sơ ri truyện Ma Tổ Đèn hấp dẫn Cuối Triều Nhà Thanh.
+
+# sample_00003.wav  6.21s  ctc=0.81  daydu=0.99
+Quân Thái Trương Bình Thiên Quốc đã nổ dậy Tiểu Biện Gã du thủ du thực làng Kim Quang.
+
+# sample_00004.wav  3.96s  ctc=0.85  daydu=1.00
+Tình cờ lạc bước vào một ngôi mộ hoang Của quý phi đời trước.
+
+# sample_00005.wav  6.47s  ctc=0.93  daydu=1.00
+gặp được bậc kỳ nhân lại được truyền cho một pho kỳ thư dạy môn xem tướng mèo tướng chó.
+
+# sample_00006.wav  2.15s  ctc=0.97  daydu=1.00
+đã thất truyền từ nhiều đời trước.
+
+# sample_00007.wav  11.68s  ctc=0.92  daydu=1.00
+Cũng từ đó hắn đã bị cuốn vào cái dòng chảy cuồn cuộn của lịch sử. Từ một kẻ khố rách áo ôm, Trương Tiểu Biện bỗng dưng trở thành một bậc anh hùng của thành Linh Châu.
+
+# sample_00008.wav  7.52s  ctc=0.93  daydu=1.00
+giúp cho quan Trên phá các cái vụ án lớn, trừ bọn yêu đạo gây họa trong thành, thống lĩnh nhạn doanh.
+
+# sample_00009.wav  6.60s  ctc=0.84  daydu=1.02
+chiến đấu với quang Thái Bình Thiên Quốc. Mỗi lần mà ngộ hiểm đều có Linh Miu tương trợ vượt qua nguy khốn.
+
+# sample_00010.wav  6.48s  ctc=0.88  daydu=0.97
+nhưng mà lũ tặc Miu thần bí ấy liệu có thật sự mang vinh hoa phú quý đến cho Trương Tiểu Biện.
+
+# sample_00011.wav  7.33s  ctc=0.94  daydu=0.98
+như vị kỳ nhân kia đã nói hay tất cả chỉ là một cái bẫy lớn đã được bí mật dăng sẵn.
+
+# sample_00012.wav  7.89s  ctc=0.98  daydu=1.00
+để mà chờ hắn bước vào những câu chuyện ly kỳ khác thường nhưng mà lại được nói đến trong phương diện hoàn toàn khác.
+
+# sample_00013.wav  2.28s  ctc=0.98  daydu=1.00
+một câu chuyện liên quan đến mèo.
+
+# sample_00014.wav  2.22s  ctc=0.97  daydu=1.00
+Hãy cùng nghe và cảm nhận.
+
+# sample_00015.wav  4.66s  ctc=0.95  daydu=1.00
+Mời các bạn nghe tập một miêu tạc của tác giả Thiên Hạ Bá Sướng.
+
+# sample_00016.wav  1.71s  ctc=0.92  daydu=1.00
+Chúc các bạn nghe truyện vui vẻ.
+
+# sample_00017.wav  6.63s  ctc=0.97  daydu=1.00
+Quyển một Chương một Chó hút Chuyện kể rằng hồi nọ có một ngôi làng.
+
+# sample_00018.wav  3.62s  ctc=0.96  daydu=1.00
+tên là Kim Quang. Vì sao mà lại có tên như vậy chứ?
+
+# sample_00019.wav  3.03s  ctc=0.83  daydu=0.72
+Vốn là từ xưa tới nay quang quách của hoàng đế.
+
+# sample_00020.wav  6.64s  ctc=0.86  daydu=1.04
+quang quách của quý phi thì được gọi là kim quang tương truyền ngày xưa có một bà quý phi.
+
+# sample_00021.wav  8.83s  ctc=0.93  daydu=1.01
+Thưở sanh tiền rất được sủng ái, nhưng mà vì đắc tội với Thái Hậu phải nhận tam bang triều điển, tức là bị thắt cổ cho tới chết.
+
+# sample_00022.wav  7.34s  ctc=0.85  daydu=1.03
+Cũng bởi vì Quý Phi chết oan, cho nên đêm đến, hãy chợp mắt, Hoàng thượng và Thái hậu lại mơ thấy bà ta.
+
+# sample_00023.wav  2.10s  ctc=0.88  daydu=1.00
+mặc váy đỏ tới đòi mạng.
+
+# sample_00024.wav  5.66s  ctc=0.94  daydu=1.00
+Nhằm an ủi vong linh của bà Phi nọ, họ mới liền cho xây một ngôi mộ ở ngoài cõi xa.
+
+# sample_00025.wav  7.34s  ctc=0.94  daydu=1.01
+để mai táng thi hài. Trước khi mai táng, cổ kim quan của bà Phi được quàn tạm trong ngôi chùa cổ.
+
+# sample_00026.wav  2.99s  ctc=0.96  daydu=1.00
+của cái làng này cho nên từ đó về sau.
+
+# sample_00027.wav  8.51s  ctc=0.94  daydu=1.02
+từ tên làng đến tên chùa đã bị đổi thành làng Kim Quang, chùa Kim Quang. Tuy nhiên, câu chuyện này thật giả thế nào?
+
+# sample_00028.wav  7.50s  ctc=0.91  daydu=1.00
+đến các bậc cổ lão ở trong làng cũng không có biết rõ bà phi nọ ngậm hờn dưới suối vàng cũng đã hàng trăm.
+
+# sample_00029.wav  5.00s  ctc=0.95  daydu=1.00
+hàng nghìn năm. Phần mộ đã hóa đất bằng, chẳng có còn biết đích xác.
+
+# sample_00030.wav  6.77s  ctc=0.89  daydu=0.99
+ngôi mộ cổ giờ ở chỗ nào nữa. Chỉ còn lại cái tên làng Kim Quang và ngôi miếu cũ quang tàn.
+
+# sample_00031.wav  4.06s  ctc=0.93  daydu=1.00
+chừng như muốn sập xuống bất cứ lúc nào làm chứng cho điều đó.
+
+# sample_00032.wav  5.53s  ctc=0.91  daydu=1.01
+Những ngói nát gạch vụn dường như vẫn còn đang âm thầm thuật lại câu chuyện xác thực.
+
+# sample_00033.wav  1.64s  ctc=0.86  daydu=1.00
+của những năm tháng xa xưa.
+
+# sample_00034.wav  5.03s  ctc=0.92  daydu=1.02
+Cho đến những năm cuối đời thanh, khởi nghĩa Thái Bình Thiên Quốc nổ ra.
+
+# sample_00035.wav  6.41s  ctc=0.96  daydu=1.01
+trên quá nửa mảnh giang sơn. Lãnh tụ của Thái Bình Thiên Quốc là Hồng Tú Toàn, người Quảng Đông.
+
+# sample_00036.wav  5.76s  ctc=0.93  daydu=1.00
+Cuộc khởi nghĩa đã dấy lên ở vùng Quế Tây, Việt Đông, cũng thuộc đất Lưỡng Quảng.
+
+# sample_00037.wav  11.34s  ctc=0.93  daydu=1.02
+Cho nên người ta mới thường gọi là loạn diệt khấu. Trăm họ quanh làng Kim Quang phải gánh chịu cái nỗi khổ chiến loạn kéo dài gần hai mươi năm. Quan quân và nghĩa quân.
+
+# sample_00038.wav  0.66s  ctc=0.96  daydu=1.00
+Công phạt.
+
+# sample_00039.wav  2.60s  ctc=0.97  daydu=1.00
+Mỗi lần mà chiến sự qua đi, thay người.
+
+# sample_00040.wav  1.85s  ctc=0.98  daydu=1.00
+Hầu như không có ai xử lý.
+
+# sample_00041.wav  5.36s  ctc=0.94  daydu=0.97
+Người dân quanh vùng, có muốn cũng không có thể mang đi chôn cất vì người chết quá nhiều.
+
+# sample_00042.wav  7.50s  ctc=0.84  daydu=1.03
+dù số thân xác máu thịt, đành phải để phơi ngoài đồng hoang, mặc cho Chẳng chó tha quả rỉa. chẳng những thế.
+
+# sample_00043.wav  3.98s  ctc=0.98  daydu=1.00
+cả bọn chó làng, lợn nuôi cũng đã tới ăn thịt người chết.
+
+# sample_00044.wav  7.80s  ctc=0.94  daydu=1.01
+Những con lợn hay ăn xác người, trông khác hẳn những con lợn thường, người tinh mắt liếc qua một cái là phân biệt được ngay.
+
+# sample_00045.wav  4.39s  ctc=0.88  daydu=1.00
+Bọn lợn ăn xác ấy, béo út cho đến đáng sợ, da bóng lông mượt.
+
+# sample_00046.wav  6.97s  ctc=0.85  daydu=0.99
+cả đôi mắt nhìn người ta cũng lộ ra cái vẻ hung tợn. Tuy lợn béo thật, nhưng mà những người nào biết nguyên do.
+
+# sample_00047.wav  2.92s  ctc=0.90  daydu=1.00
+thì cả đời cũng không có dám xơi thịt lợn nữa.
+
+# sample_00048.wav  3.43s  ctc=0.92  daydu=1.02
+Mà đến nhìn người khác ăn vào cũng còn thấy buồn nôn.
+
+# sample_00049.wav  4.59s  ctc=0.94  daydu=1.00
+Trong làng Kim Quang có một đứa trẻ mồ côi, họ Trương, con thứ ba.
+
+# sample_00050.wav  4.55s  ctc=0.97  daydu=1.00
+Hai người chị đã chết yểu từ lâu, cho nên hắn tự xưng là Trương Tam.
+
+# sample_00051.wav  6.41s  ctc=0.79  daydu=1.08
+cũng chẳng hiểu tên thật của hắn là gì chỉ biết bẩm sinh tóc của hắn vừa thưa vừa vàng.
+
+# sample_00052.wav  6.70s  ctc=0.93  daydu=1.04
+tới mười lăm mười sáu tuổi cũng không có tết nổi cái bím đành phải dùng cỏ bện lại gắn bừa vào.
+
+# sample_00053.wav  6.81s  ctc=0.84  daydu=1.10
+thành một cái biếm nhỏ nhỏ trồng như cái đuôi chó. Phàm là người quen biết đều gọi hắn là Trương Tiểu Biện.
+
+# sample_00054.wav  7.42s  ctc=0.93  daydu=0.92
+Trương Tiểu Biện nghèo xơ xác không có lấy một tấc lều trú thân cho nên thường quanh quẩn ở trong ngôi chùa kim quang đổ nát.
+
+# sample_00055.wav  7.80s  ctc=0.96  daydu=0.99
+Hắn đã hất đổ tượng đất. Trải ít rơm lên trên cái bệ tượng để mà ngủ. Ban ngày thường đến các nhà giúp gánh nước.
+
+# sample_00056.wav  6.95s  ctc=0.89  daydu=0.96
+làm việc Để mà kiếm chút rau cháo qua ngày. Hắn từng có lúc theo học vị sư phó của tiệm quan tài.
+
+# sample_00057.wav  7.63s  ctc=0.95  daydu=0.99
+Lại cũng tự nhận vị đạo sĩ bói toán làm thầy. Xong cái thời loạn lạc này Mấy ông thầy lo thân còn chẳng nổi.
+
+# sample_00058.wav  7.24s  ctc=0.89  daydu=1.02
+Nói gì đến chuyện nuôi thêm đồ đệ. Thế là mấy cái nghề đó Hắn cũng chẳng có học được cho ra ngô ra khoai.
+
+# sample_00059.wav  3.29s  ctc=0.99  daydu=1.00
+Có những đoạn khó khăn, mấy ngày trời chẳng có gì ăn.
+
+# sample_00060.wav  4.47s  ctc=0.96  daydu=1.00
+Trương Tiểu Biện đành phải quay sang bắt gà trộm chó hàng đêm.
+
+# sample_00061.wav  7.75s  ctc=0.92  daydu=0.99
+để cho qua cơn đói khát. Hắn biết rằng, nhà của mình trước khi mà suy vi, có ông Tổ làm quan to trong kinh thành.
+
+# sample_00062.wav  2.61s  ctc=0.89  daydu=1.00
+Trong thâm tâm, vẫn thường tự hào lắm.
+
+# sample_00063.wav  3.24s  ctc=0.94  daydu=1.00
+Phải đi trộm cắp thế này, kể cũng lấy làm nhục.
+
+# sample_00064.wav  5.08s  ctc=0.94  daydu=1.01
+Nhưng mà trong thời buổi, binh đao loạn lạc, kiếm được cái miếng ăn đâu phải là chuyện dễ.
+
+# sample_00065.wav  4.58s  ctc=0.93  daydu=1.00
+Bụng đói thì khó nói mạnh, bàn gì đến chuyện xuất thân này nọ chứ.
+
+# sample_00066.wav  6.23s  ctc=0.90  daydu=1.01
+Mấy năm rồi, thiên tai địch họa liên miên cái ăn ở trong làng cũng không còn sung túc như trước.
+
+# sample_00067.wav  2.97s  ctc=0.84  daydu=1.07
+Đến rào cháo qua bữa cũng khá vất vả.
+
+# sample_00068.wav  4.54s  ctc=0.97  daydu=1.00
+Đêm hôm đó, Trương Tiểu Biện đói đến mức trằn trọc mãi không có ngủ được.
+
+# sample_00069.wav  7.50s  ctc=0.88  daydu=0.97
+Hắn mới nằm ngang trên cái bệ tượng thần, chân vắt chữ ngũ, ngửa mặt, nhìn cả ánh trăng xuyên lớm đớm qua mái chùa nát.
+
+# sample_00070.wav  6.23s  ctc=0.98  daydu=1.00
+Trong lòng tính cách kiếm cái gì Ăn cho đỡ đói Chứ không thì thực chất Không có chịu nổi nữa rồi.
+
+# sample_00071.wav  7.75s  ctc=0.96  daydu=1.00
+Vài năm nay hắn vẫn quen thói trộm gà Bởi vì trong làng có nhiều gà nuôi Cách ba bữa lại bắt vài con.
+
+# sample_00072.wav  6.95s  ctc=0.95  daydu=1.00
+Trước nay Chưa có từng trộm trượt bao giờ Chưa có từng trộm trượt Không phải là vì may mắn Mà bởi vì.
+
+# sample_00073.wav  5.69s  ctc=0.97  daydu=0.96
+hắn đã nghĩ ra được một món Trộm gà hết sức độc đáo Quyết ý như vậy.
+
+# sample_00074.wav  9.72s  ctc=0.93  daydu=0.99
+Trương Tiểu Biện mới liền nhân lúc trăng lu gió lớn mò vào trong sân ngoài của mẹ con bà Dương Quả Phụ ở trong làng. Nhà này không có đàn ông.
+
+# sample_00075.wav  7.50s  ctc=0.95  daydu=1.01
+lại không có nuôi chó, cửa nẻo thấp nhỏ. Trương Tiểu Biện lại thuộc vị trí các ổ gà trong làng.
+
+# sample_00076.wav  5.69s  ctc=0.92  daydu=0.97
+Hắn chẳng chút tốn công sức nào. Đã vượt qua cái bờ tường Phát hiện ngay con gà mái.
+
+# sample_00077.wav  6.48s  ctc=0.99  daydu=0.14
+Đang thiêm thiếp trong chuồng. Nhìn đã rõ xong, Trương Tiểu Biện không có bắt ngay mà nhẹ nhàng.
+
+# sample_00078.wav  6.56s  ctc=0.88  daydu=0.97
+thò tay vào trong ổ, thi triển tuyệt chiêu độc đáo của mình, gãi nhè nhẹ vào bụng con gà mái.
+
+# sample_00079.wav  6.71s  ctc=0.91  daydu=1.00
+Phàm mỗi khi có kẻ trộm gà hay trộm khoét ổ, bọn gà chắc chắn sẽ vỗ cánh kêu toáng lên.
+
+# sample_00080.wav  6.45s  ctc=0.85  daydu=1.00
+khiến cho chủ nhà thức dậy. Nhưng Trương Tiểu Biện có cách riêng của gã, chỉ gãi nhẹ có mấy lượt.
+
+# sample_00081.wav  6.52s  ctc=0.93  daydu=1.00
+con gà mái ở trong chuồng chẳng những không có vỗ cánh và kêu toáng lên mà còn tỏ ra dễ chịu sung sướng.
+
+# sample_00082.wav  3.89s  ctc=0.93  daydu=1.00
+tựa hồ rất thích thú vì được người ta gãi ngứa hộ.
+
+# sample_00083.wav  5.11s  ctc=0.98  daydu=0.98
+Trương Tiểu Biện mừng lắm chỉ cần là bước đầu tiên không có thất bại con gà này.
+
+# sample_00084.wav  6.55s  ctc=0.84  daydu=0.98
+kể như đã vào tay của hắn rồi nhìn cái bộ dạng con gà mái hắn thầm cáo tiếc ông.
+
+# sample_00085.wav  7.16s  ctc=0.87  daydu=0.99
+chẳng có chiều chuộng mày xuông đâu đợi khi mà về đến miếu quang vặt lông của mày mày chẳng có được dễ chịu như thế này nữa.
+
+# sample_00086.wav  6.84s  ctc=0.92  daydu=1.00
+trong lòng mới vui vẻ một tay của hắn không ngừng gãi cho con gà tay kia đỡ cái mái chuồng gà ra.
+
+# sample_00087.wav  7.54s  ctc=0.86  daydu=1.00
+Định bụng ôm con gà lên theo lối phía trên. Nhưng mà có lẽ vì lâu không có trộm, ngón nghề có hơi chệch choạc.
+
+# sample_00088.wav  5.51s  ctc=0.96  daydu=0.98
+Cũng có khả năng vì mấy bữa đói ăn, tựu trung là tay chân hẳn có phần luống cuống.
+
+# sample_00089.wav  5.07s  ctc=0.91  daydu=1.02
+Đúng lúc nhấc con gà ra khỏi chuồng, chưa có kịp ôm cho chắc đã làm rớt xuống đất.
+
+# sample_00090.wav  5.54s  ctc=0.90  daydu=1.02
+Con gà mái, nửa tỉnh nửa mê, đang lúc sung sướng, mơ màng, bỗng ngã oạch xuống.
+
+# sample_00091.wav  1.54s  ctc=0.97  daydu=1.00
+Lập tức tỉnh cơn mộng đẹp.
+
+# sample_00092.wav  3.24s  ctc=0.99  daydu=1.00
+Đại khái nó cũng hiểu ra đây là kẻ trộm gà.
+
+# sample_00093.wav  1.69s  ctc=0.86  daydu=1.00
+Nào có chịu buông tha chứ.
+
+# sample_00094.wav  4.06s  ctc=0.83  daydu=1.04
+Nó liền mới lập tức giang cánh vỗ phành phạch, kêu loạn cả lên.
+
+# sample_00095.wav  2.09s  ctc=0.90  daydu=0.97
+Quả nhiên khiến cho chủ nhà thức giấc.
+
+# sample_00096.wav  3.27s  ctc=0.90  daydu=1.02
+Chỉ nghe tiếng của dương quả phụ trong cửa sổ chửi vọng ra.
+
+# sample_00097.wav  3.24s  ctc=0.91  daydu=1.03
+Cái thằng ranh nào dám vào trộm gà nhà ta chứ.
+
+# sample_00098.wav  4.42s  ctc=0.92  daydu=1.00
+Chắc là cái thằng ranh chết bầm, Trương Tiểu Biện, ở miếu quan tài có phải không?
+
+# sample_00099.wav  7.62s  ctc=0.86  daydu=0.99
+bà còn mỗi con gà đẻ trứng này mà mày cũng không tha sao chửi chưa có dứt lời đã thấy cửa sổ nhấc lên.
+
+# sample_00100.wav  7.29s  ctc=0.93  daydu=0.99
+một cái thùng nước tiểu vụt bay ra trương tiểu biện thấy một vật không rõ hình thù bay ra mới vội rụt cổ tránh.
+
+# sample_00101.wav  7.75s  ctc=0.86  daydu=1.00
+thúng nước tiểu giống vốn là nhắm không có chuẩn va vào tường đánh chát một cái thứ nước khai thối giải tóe ra tứ phía.
+
+# sample_00102.wav  6.80s  ctc=0.89  daydu=1.03
+hắn biết chuyện đã chẳng xong rồi mới thầm nhủ không ngờ tiếng tăm của tam gia ta ta lần lẫy đến thế.
+
+# sample_00103.wav  4.74s  ctc=0.87  daydu=1.02
+Đến cái mụ dương quả phụ, nghe tiếng gà động, mà cũng biết, tam gia ở đây.
+
+# sample_00104.wav  3.75s  ctc=0.97  daydu=1.00
+lại còn tương ra một cái thùng nước tiểu, vừa khai vừa thối.
+
+# sample_00105.wav  4.80s  ctc=0.80  daydu=0.98
+Rơi vào tay của mụ này, chắc ốm đòn. Tránh doi, chẳng có xấu mặt nào.
+
+# sample_00106.wav  2.82s  ctc=0.93  daydu=0.97
+Giờ mà không chạy, còn đợi đến lúc nào nữa chứ.
+
+# sample_00107.wav  4.96s  ctc=0.92  daydu=1.02
+Nghĩ tới đây, trương tiểu biện, không có dám chậm trễ, mới vội tung mình, nhảy ra ngoài.
+
+# sample_00108.wav  4.09s  ctc=0.87  daydu=0.98
+Bên tai, còn có tiếng của dương quả phụ, chửi bới liên thanh trong nhà.
+
+# sample_00109.wav  7.38s  ctc=0.87  daydu=1.00
+dường như đang bảo đứa con gái tiểu phượng sang nhà hàng xóm mượn chó đuổi trộm. Trương tiểu biện mới chửi thầm.
+
+# sample_00110.wav  6.96s  ctc=0.95  daydu=0.99
+cái mụ dương này được lắm chả trách người ta vẫn bảo nhà quả phụ lắm điều nhiều tiếng lời này.
+
+# sample_00111.wav  6.43s  ctc=0.91  daydu=1.00
+chẳng có sai chút nào ông trộm có mỗi một con gà mà nào có vào tay của ông chứ cớ sao.
+
+# sample_00112.wav  3.82s  ctc=0.78  daydu=0.93
+mụ phải đuổi tận giết tuyệt chứ đợi tam gia ta phát quan.
+
+# sample_00113.wav  6.58s  ctc=0.92  daydu=1.00
+ông đền cho mụ một cái thùng nước tiểu bằng vàng đó miệng nói cứng như vậy nhưng mà dẫu sao.
+
+# sample_00114.wav  6.14s  ctc=0.84  daydu=1.05
+hắn vẫn có tật giật mình các nhà láng giềng xung quanh nhà nào cũng nuôi chó khi ấy.
+
+# sample_00115.wav  7.77s  ctc=0.93  daydu=1.02
+đều đã bị cái thùng nước tiểu của dương quả phụ đánh động thế là bốn phía chó sủa gà kêu cả làng loạn hết cả lên.
+
+# sample_00116.wav  6.65s  ctc=0.95  daydu=1.00
+người ta còn tưởng là sơn tặc tới cướp làng nữa quả này dạ to rồi trường tiểu biện.
+
+# sample_00117.wav  6.32s  ctc=0.87  daydu=1.03
+biết phải trốn đi mấy ngày mới xong nếu không cả làng ai chẳng biết Hắn trú ngụ ở miếu Kim Quang.
+
+# sample_00118.wav  4.40s  ctc=0.92  daydu=1.00
+Nếu bị chặn bắt ở ngôi miếu nát đó thì chắp cánh cũng khó thoát.
+
+# sample_00119.wav  4.42s  ctc=0.86  daydu=1.00
+Vậy là hắn mới liền nhân đêm tối vội vã bỏ chạy khỏi làng.
+
+# sample_00120.wav  6.84s  ctc=0.91  daydu=1.01
+chạy một mạch tưởng là đứt hơi mới dám dừng chân tiếng người kêu chó sủa ở trong làng đã bặt hẳn rồi.
+
+# sample_00121.wav  7.28s  ctc=0.93  daydu=1.04
+trương tiểu biện thở phào như cất được cái gánh nặng trong lòng vừa thở hổn hển vừa đưa mắt nhìn xung quanh.
+
+# sample_00122.wav  7.77s  ctc=0.96  daydu=1.00
+để xem mình đã chạy tới chỗ nào rồi chỉ thấy là trăng lạnh sao mờ cây khô cỏ dại trong lùm cỏ rậm rạp.
+
+# sample_00123.wav  6.97s  ctc=0.85  daydu=1.00
+gò mồ nhấp nhô đá bia lổm chổm hóa ra lúc nãy hoảng quá chẳng có chọn đường.
+
+# sample_00124.wav  2.39s  ctc=0.85  daydu=1.00
+chạy lạc vào cái bãi tha ma phía sau làng.
+
+# sample_00125.wav  5.19s  ctc=0.95  daydu=1.00
+Bãi tha ma này nghe nói phong thủy cũng tốt lắm, lại là đất vô chủ.
+
+# sample_00126.wav  3.43s  ctc=0.90  daydu=0.95
+Người chết ở làng, xa thôn đều là mang tới đây để chôn.
+
+# sample_00127.wav  3.31s  ctc=0.90  daydu=1.00
+Vì thế, vô số mộ phần, chèn dài, thích cánh.
+
+# sample_00128.wav  4.46s  ctc=0.95  daydu=0.94
+Màu đất còn tươi mới là những cái mộ mới đắp, còn những cái mộ lâu.
+
+# sample_00129.wav  7.44s  ctc=0.91  daydu=0.99
+thì đầy cỏ dại, nhiều không có đếm xuể. Cách đây không lâu, có mấy cánh quân diệt khẩu xuất hiện ở cái địa bàn này.
+
+# sample_00130.wav  6.99s  ctc=0.92  daydu=1.00
+giao tranh ác liệt với quân binh mấy trận cũng mới vừa rút đi bỏ lại chiến trường hàng nghìn xác chết.
+
+# sample_00131.wav  6.40s  ctc=0.90  daydu=1.02
+xác người không có kịp chôn cất rữa nát, bốc mùi gây ra một đợt ôn dịch nhỏ vì vậy.
+
+# sample_00132.wav  7.06s  ctc=0.92  daydu=0.97
+dân cư vùng lân cận chết nhiều hơn trước bãi ma này cũng bởi vì thế có thêm nhiều mộ mới.
+
+# sample_00133.wav  7.70s  ctc=0.96  daydu=0.99
+những nhà khá giả một chút thì mộ có quan tài, bia đá còn cái đám người cùng khổ thì đâu có may mắn như vậy chứ.
+
+# sample_00134.wav  3.92s  ctc=0.99  daydu=1.00
+Khi chết, có được một cỗ áo quan mỏng là may mắn lắm rồi.
+
+# sample_00135.wav  7.14s  ctc=0.91  daydu=1.01
+Có khi còn là phải lấy manh chiếu gai bó lại rồi vùi xuống huyệt. Nấm mồ cũng nhỏ bé đến tội.
+
+# sample_00136.wav  5.11s  ctc=0.95  daydu=1.00
+Còn bia đá bỏ được thì bỏ, lấy cái miếng gỗ cành cây cắm xuống cũng xong.
+
+# sample_00137.wav  3.84s  ctc=0.97  daydu=0.98
+Những ngôi mộ mới không có được đánh dấu như thế sẽ nhanh chóng.
+
+# sample_00138.wav  2.08s  ctc=0.92  daydu=1.00
+biến thành những cái nấm mồ vô chủ.
+
+# sample_00139.wav  2.35s  ctc=0.91  daydu=1.00
+Đêm đến, những lúc mây đen mù mịt.
+
+# sample_00140.wav  7.72s  ctc=0.85  daydu=1.01
+bãi tha ma lại thấp thoáng những cái đốm lửa ma trơi. thỉnh thoảng một hai con mèo hoang lao vụt ra từ cái đám cỏ.
+
+# sample_00141.wav  2.88s  ctc=0.83  daydu=1.07
+thêm vào đó là những cái âm thanh quái dị.
+
+# sample_00142.wav  7.83s  ctc=0.93  daydu=0.99
+chẳng biết là ma kêu hay là sói gào vọng ra tích tắp bên trong khiến cho người ta nghe mà dựng cả tóc gáy.
+
+# sample_00143.wav  7.35s  ctc=0.93  daydu=1.00
+trương Tiểu biện vốn là một kẻ gan to bằng trời đằng nào cũng có mỗi cái mạng quèn lại nghèo khổ mạt vận.
+
+# sample_00144.wav  6.68s  ctc=0.87  daydu=1.00
+ở đâu cũng thế cả vì thế xưa nay đều là chẳng có đếm xỉa ma cũng chẳng có sợ quỷ thần.
+
+# sample_00145.wav  7.70s  ctc=0.92  daydu=0.97
+giả như là không có lớn mật như thế thì làm sao mà đêm đêm hắn dám một mình ở trên cái miếu hoang nhập nhoạng kia chứ.
+
+# sample_00146.wav  7.42s  ctc=0.92  daydu=1.00
+chỉ có điều tự dưng chạy lạc vào cái bãi tha ma như thế hắn cũng cảm thấy sợ mới vội vã nhìn tứ phía.
+
+# sample_00147.wav  1.39s  ctc=0.84  daydu=1.08
+vái như sải gạo.
+
+# sample_00148.wav  2.13s  ctc=0.93  daydu=1.00
+các vị đại ca đại tỷ.
+
+# sample_00149.wav  7.83s  ctc=0.91  daydu=1.03
+tiểu nhân là trương tam không có dám mạo phạm đâu, chỉ là vô tình làm kinh động, xin đừng có trách mắng nha, đừng, đừng có trách mắng.
+
+# sample_00150.wav  2.35s  ctc=0.98  daydu=0.97
+Nói xong, hắn định quay người rời đi.
+
+# sample_00151.wav  4.19s  ctc=0.93  daydu=1.00
+Chính lúc đó, đột nhiên nghe thấy bên trong cái nấm mồ sau lưng.
+
+# sample_00152.wav  5.64s  ctc=0.87  daydu=0.98
+nổi lên một tràn thùng, thùng, thùng. Tự nhiên là có người nào đang dùng hết sức.
+
+# sample_00153.wav  7.29s  ctc=0.94  daydu=1.01
+đập vào cánh cửa gỗ. Nhưng, nhưng mà trong cái bãi tha ma lổn nhổn này lấy đâu ra nhà cửa âm thanh ấy.
+
+# sample_00154.wav  2.59s  ctc=0.89  daydu=1.00
+nhất định cái tiếng đập nắp quan tài rồi.
+
+# sample_00155.wav  5.82s  ctc=0.88  daydu=1.01
+Đương lúc đêm khuya, bốn bề vắng lặng lạ thường, khiến cho tiếng đập nắp quan tài càng nghe.
+
+# sample_00156.wav  6.98s  ctc=0.89  daydu=1.00
+càng kinh hồn tán đởm. Trương tiểu biện thấy cái bím nhỏ sau gáy đã dựng đứng lên, nhưng mà hắn.
+
+# sample_00157.wav  1.63s  ctc=0.95  daydu=1.00
+không có lập tức bỏ chạy ngay.
+
+# sample_00158.wav  6.86s  ctc=0.92  daydu=1.00
+Cuộc đào thoát bở hơi tai vừa rồi, cộng thêm cái bụng đói meo, khiến cho hắn không có thể nhấc nổi chân lên nữa.
+
+# sample_00159.wav  4.53s  ctc=0.94  daydu=1.00
+Chỉ lấy ống tay áo, quệt nước mũi, quan sát các cái nấm mồ xung quanh.
+
+# sample_00160.wav  5.33s  ctc=0.87  daydu=1.05
+Lòng thầm nghĩ Không biết cái mã chết toi nào Đang đùa giỡn với tam gia của ta.
+
+# sample_00161.wav  6.21s  ctc=0.87  daydu=0.91
+Tam gia Chẳng phải là vừa khẩn vái chúng bay rồi còn gì nữa Sao mà vẫn còn lằng nhằng Không tha vậy.
+
+# sample_00162.wav  7.49s  ctc=0.90  daydu=0.98
+Định dọa để cho tam gia Phải rập đầu xin chắc tiếng đập quan tài Trong cái nấm mồ kia càng lúc càng to.
+
+# sample_00163.wav  6.35s  ctc=0.96  daydu=1.00
+Trương Tiểu Biện, hồ nghi Đây là cái bọn trộm mộ Đang cạy nắp quan tài Phải lại đó.
+
+# sample_00164.wav  4.01s  ctc=0.92  daydu=0.89
+xem cái thứ gì tác quái mới được Nếu đúng là cái phường trộm.
+
+# sample_00165.wav  1.19s  ctc=0.73  daydu=1.00
+Dọa hắn một phen.
+
+# sample_00166.wav  5.42s  ctc=0.96  daydu=0.96
+phỏng tay trên của nó ít tang vật thế gọi là cá lớn nuốt cá bé càng nuốt.
+
+# sample_00167.wav  4.05s  ctc=0.84  daydu=1.03
+càng béo. Hắn mới đi vài bước ra phía sau ngôi mộ ấy.
+
+# sample_00168.wav  4.25s  ctc=0.88  daydu=1.00
+Đó là một nấm mộ vô chủ còn mới. Gò đất bị ai đó.
+
+# sample_00169.wav  4.56s  ctc=0.93  daydu=1.00
+đào lên một cái lỗ lớn âm thanh quái dị thùng thùng thùng kia.
+
+# sample_00170.wav  6.45s  ctc=0.93  daydu=1.02
+từ phía dưới vọng lên hắn vừa bước tới gần đã nghe cái tiếng gầm gừ rất lớn giọng lên.
+
+# sample_00171.wav  1.86s  ctc=0.92  daydu=0.96
+từ cái hố bên cạnh cái nắm mộ.
+
+# sample_00172.wav  3.47s  ctc=0.89  daydu=0.97
+Một cái mặt đầy lông, lem luốc, màu máu thò ra.
+
+# sample_00173.wav  7.94s  ctc=0.87  daydu=0.93
+Trên trán của nó mọc một cái u lớn hình bầu dục, lưỡi thè ra đỏ lòm, răng nanh ở bên mép còn dính cái vết máu.
+
+# sample_00174.wav  2.15s  ctc=0.83  daydu=0.95
+Hai mắt lóe lên vẻ hung ác.
+
+# sample_00175.wav  2.20s  ctc=0.90  daydu=1.00
+hằn học nhìn vào trương tiểu biện.
+
+# sample_00176.wav  2.04s  ctc=0.93  daydu=0.96
+Trương tiểu biện thầm kêu khổ.
+
+# sample_00177.wav  3.44s  ctc=0.95  daydu=0.97
+Sao mà hắn không có nghĩ đến cái của nợ này cơ chứ?
+
+# sample_00178.wav  2.41s  ctc=0.98  daydu=1.00
+Bây giờ hiểu ra thì cũng đã muộn rồi.
+
+# sample_00179.wav  2.71s  ctc=0.94  daydu=1.03
+Chỉ còn cách lẩn vào bụi rậm mà thoát thôi.
+
+# sample_00180.wav  6.73s  ctc=0.96  daydu=0.99
+Thì ra Chó quang xưa nay và ngày nay Không có giống nhau Sau giải phóng xã hội ổn định.
+
+# sample_00181.wav  6.42s  ctc=0.92  daydu=1.01
+Rồi có một số loài chó hoang Đã dần tuyệt tích Còn giữa cái thời loạn lạc Mạng người như cỏ rác.
+
+# sample_00182.wav  6.38s  ctc=0.98  daydu=1.02
+Bởi người chết quá nhiều Cho nên chuyện thi thể phơi giữa đồng Ở đâu cũng có Thế nên.
+
+# sample_00183.wav  6.98s  ctc=0.93  daydu=0.96
+những cái động vật ăn xác chết cũng rất nhiều Ở vùng nông thôn hoang giả có một loại chó quang chuyên ăn xác.
+
+# sample_00184.wav  6.64s  ctc=0.92  daydu=1.06
+Đánh hơi thấy cái mùi người chết. là bới lỗ trên mộ, đào xuống đến quan tài thì mới dùng đầu.
+
+# sample_00185.wav  4.21s  ctc=0.91  daydu=1.02
+húc cho vỡ cái áo quan để mà lôi người chết ra mà ăn ruột gan.
+
+# sample_00186.wav  7.05s  ctc=0.90  daydu=0.99
+Loại chó hoang này vóc dáng cao lớn, tính tình hung tàn, ăn nhiều phủ ngũ tạng của người chết, đâm ra.
+
+# sample_00187.wav  7.68s  ctc=0.93  daydu=0.98
+không có muốn ăn bất cứ cái thứ gì khác. Có những lúc gặp người sống đi đơn độc, chúng cũng bổ nhào đến cắn chết ăn thịt.
+
+# sample_00188.wav  6.68s  ctc=0.93  daydu=0.97
+Những con chó hoang có bú máu là do ăn nhiều người chết Từ khi mà ám khí nặng nề trên cơ thể.
+
+# sample_00189.wav  5.89s  ctc=0.96  daydu=1.00
+răng có độc của người chết Bị nó cắn thì coi như là rồi đời Đặc trưng của nó.
+
+# sample_00190.wav  2.54s  ctc=0.92  daydu=0.97
+là trên trán có một cái bướu đỏ màu máu.
+
+# sample_00191.wav  7.68s  ctc=0.87  daydu=1.00
+Cứng hơn cả bú sắc Quan tài của người nghèo vừa mỏng vừa rẻ Cùng lắm dày không có quá ba phân gỗ bách.
+
+# sample_00192.wav  7.41s  ctc=0.91  daydu=0.99
+ván quan tài bị cái loài chó này húc đầu vào dài lượt là sẽ dở ngay Những cái quang tài đơn sơn như thế.
+
+# sample_00193.wav  2.00s  ctc=0.93  daydu=1.04
+có tên gọi là quan tài chó húc.
+
+# sample_00194.wav  2.10s  ctc=0.99  daydu=1.00
+Ý nghĩa hết sức dễ hiểu.
+
+# sample_00195.wav  4.55s  ctc=0.92  daydu=1.04
+tang gia mua một quan tài chó húc về để mà tẩn liệm mai táng người chết.
+
+# sample_00196.wav  7.44s  ctc=0.94  daydu=1.00
+đã là tận tâm lắm rồi. Sau đó thì cái vị trong quan tài kia cứ ở đó đợi chó hoang đến xơi dần.
+
+# sample_00197.wav  5.03s  ctc=0.96  daydu=1.00
+Xong cái thời đó đến quan tài chó húc ba phân gỗ này cũng không đủ mà bán.
+
+# sample_00198.wav  4.35s  ctc=0.93  daydu=1.00
+Đúng là người không có lòng hại chó, chó lại có ý giết người.
+
+# sample_00199.wav  3.97s  ctc=0.94  daydu=1.00
+Xong cái thời đó, đến quan tài chó húc, ba phân gỗ này.
+
+# sample_00200.wav  7.64s  ctc=0.93  daydu=1.00
+cũng không có đủ mà bán. Chương hai Mộ Mèo Khóc Nói đến đoạn.
+
+# sample_00201.wav  7.26s  ctc=0.85  daydu=1.00
+trương tiểu biện, nửa đêm hôm, trộm gà không thành, chạy nhầm vào cái bãi tha ma hoang vắng, làm kinh động con chó hoang.
+
+# sample_00202.wav  1.56s  ctc=0.89  daydu=1.00
+đang húc mả ăn xác.
+
+# sample_00203.wav  3.91s  ctc=0.91  daydu=0.98
+Con chó đào được một ngôi mộ mới, vừa húc thủng cái ván áo quan.
+
+# sample_00204.wav  19.64s  ctc=0.88  daydu=0.99
+cắn toét cả ngực lẫn bụng tử thi Đang định lôi cái bộ ruột ra Thì nghe thấy phía sau có tiếng động liền mới lập tức chui ra bên ngoài Đúng lúc đang đói mờ mắt Lại vừa liếm máu thịt của tử thi Thấy một cái gã sớ rớ Ở ngoài nấm mộ Hai con mắt dằn cái tia máu của nó Liền mới lông lên sòng sọc.
+
+# sample_00205.wav  5.25s  ctc=0.87  daydu=1.00
+sọc thẳng vào kẻ mới đến cắn xé Trương Tiểu Biện thấy Nguy mới vội la lên.
+
+# sample_00206.wav  2.31s  ctc=0.79  daydu=0.87
+Có giỏi thì đứng yên đó, đứng yên đó.
+
+# sample_00207.wav  2.48s  ctc=0.88  daydu=1.00
+Lời chưa dứt đã quay đầu bỏ chạy rồi.
+
+# sample_00208.wav  2.31s  ctc=0.99  daydu=1.00
+Rõ ràng còn cất chân không nổi.
+
+# sample_00209.wav  3.93s  ctc=0.95  daydu=1.00
+Nhưng mà trong cơn kinh hoàng chẳng hiểu hắn lấy sức lực ở đâu ra.
+
+# sample_00210.wav  2.87s  ctc=0.90  daydu=1.00
+Sải bước chạy như bay trong bãi tha ma.
+
+# sample_00211.wav  7.18s  ctc=0.90  daydu=1.04
+Hắn thừa hiểu rằng nếu cứ thế mà chạy, chưa có được mười bước, ắt sẽ bị con chó hoang vồ được mà móc ruột ra.
+
+# sample_00212.wav  6.39s  ctc=0.92  daydu=0.99
+Vậy là liền nảy ra một ý Đứng phắt lại tránh khỏi một cái vồ của con chó Đang đuổi sau lưng.
+
+# sample_00213.wav  5.49s  ctc=0.92  daydu=0.98
+Rồi mới chạy chéo vào ở phía sau bãi tha ma Mượn cái đám bia mộ ẩn nấp tránh né.
+
+# sample_00214.wav  7.78s  ctc=0.86  daydu=0.96
+Con chó hoang vồ hụt một phát Mới càng điên tiết Lập tức quay đầu lại Gục gặt cây bú to đỏ như máu.
+
+# sample_00215.wav  7.48s  ctc=0.91  daydu=1.00
+Cắm đầu đuổi sát trương tiểu biện chực cắn. Trương tiểu biện chạy quanh co trong rừng bia mộ và các cái nấm mồ.
+
+# sample_00216.wav  2.73s  ctc=0.92  daydu=1.00
+Địa thế bãi tha ma, cao thấp lô nhô.
+
+# sample_00217.wav  2.89s  ctc=0.89  daydu=1.00
+Ngăn bước truy đuổi điên cuồng của con chó hoang.
+
+# sample_00218.wav  5.17s  ctc=0.94  daydu=1.00
+Một người một chó cứ thế mà đuổi bắt quanh mấy ngôi mộ thành một cái vòng tròn.
+
+# sample_00219.wav  6.95s  ctc=0.90  daydu=0.97
+Con chó hoang hung hăng tàn bạo tuy là mắt thấy cái miếng mồi sống đã đến tận miệng rồi mà nhất thời.
+
+# sample_00220.wav  1.65s  ctc=0.89  daydu=1.00
+cũng khó vồ lấy được ngay.
+
+# sample_00221.wav  6.65s  ctc=0.85  daydu=1.01
+Rốt cuộc con chó hoang cũng đã hiểu ra nó không có lòng vòng đuổi theo trương tiểu biện giữa cái đám mộ hoang nữa.
+
+# sample_00222.wav  5.23s  ctc=0.91  daydu=0.98
+mà nhảy chồm lên một ngôi mồ cao định bụng lấy cái cách ở trên cao đánh thấp.
+
+# sample_00223.wav  7.59s  ctc=0.94  daydu=1.00
+từ trên ấy vồ thẳng xuống mà thịt người chiêu này gọi là chó cùng rứt giậu kỳ thật ra.
+
+# sample_00224.wav  7.84s  ctc=0.91  daydu=1.00
+dẫu cho nó không có làm như thế vị Trương Tam gia kia cũng sắp chạy không có nổi nữa rồi lúc này hắn đang thở hổn hển.
+
+# sample_00225.wav  7.95s  ctc=0.95  daydu=1.01
+lồng ngực như muốn nổ tung ra nhưng mà chó cùng thì rứt giậu người ta khó thì ló cái khôn Trương tiểu biện.
+
+# sample_00226.wav  6.66s  ctc=0.94  daydu=1.00
+thấy mình lâm vào cái đường cùng tự dưng cái mật lại to ra liền mới bỏ qua cái chuyện sống chết.
+
+# sample_00227.wav  7.77s  ctc=0.92  daydu=0.99
+khom lưng ngồi xổm xuống đất Không có chạy nữa xưa nay việc quân chẳng ngại dối trá Chiêu này của Tam gia.
+
+# sample_00228.wav  5.72s  ctc=0.99  daydu=0.06
+cũng tuyệt không phải là cái dũng của kẻ thất phu. Đi đêm ở đường làng thường gặp phải.
+
+# sample_00229.wav  8.41s  ctc=0.93  daydu=0.95
+lúc chó hoang lan sói. Sau nhiều bài học xương máu, dân gian đã đúc kết ra một số phòng thân. Có câu tục ngữ rất hay rằng.
+
+# sample_00230.wav  4.22s  ctc=0.87  daydu=0.97
+Chó sợ khom lưng, soi kình thúc trống. Lan sói.
+
+# sample_00231.wav  3.41s  ctc=0.86  daydu=1.05
+chó hoang, dẫu là hung hăng đến mấy, đều có nhược điểm.
+
+# sample_00232.wav  2.05s  ctc=0.84  daydu=1.00
+Tính đa nghi của loài sói nặng nhất.
+
+# sample_00233.wav  5.31s  ctc=0.92  daydu=1.00
+Một người đi đêm, một mình gặp sói, thì khó mà không táng đởm kinh hồn cho được.
+
+# sample_00234.wav  5.32s  ctc=0.88  daydu=1.04
+Nhưng mà nếu bỏ chạy, mười phần chắc chính là bị sói đuổi theo kịp xơi tái.
+
+# sample_00235.wav  8.00s  ctc=0.88  daydu=1.00
+Hẳn như lúc ấy có thể bình tĩnh, giả tản lờ con ác thú đi, thò tay vào túi, mò bên này, sờ bên nọ.
+
+# sample_00236.wav  3.98s  ctc=0.98  daydu=1.00
+làm những cái việc mà chính anh ta cũng không biết mình đang làm cái gì nữa.
+
+# sample_00237.wav  3.06s  ctc=0.94  daydu=1.00
+Con sói sẽ không có dám mạo hiểm xông tới cắn.
+
+# sample_00238.wav  2.99s  ctc=0.93  daydu=0.97
+Nó nghi ngờ cái anh này đang bày mưu bắt nó.
+
+# sample_00239.wav  5.72s  ctc=0.86  daydu=1.03
+Còn cái bọn chó hoang lại sợ người ta khom người bởi vì anh ta đang cúi xuống.
+
+# sample_00240.wav  4.69s  ctc=0.87  daydu=1.04
+lượm cái gậy để mà đánh nó. Dẫu cho con nó hung hăng bao nhiêu mặt lòng.
+
+# sample_00241.wav  3.77s  ctc=0.91  daydu=1.00
+bẩm sinh cái loài chó hết sức sợ những cái thứ côn bổng ấy rồi.
+
+# sample_00242.wav  4.24s  ctc=0.84  daydu=1.07
+Vậy nên đám hành khất đều đem theo đả cẩu bổng là như thế.
+
+# sample_00243.wav  2.61s  ctc=0.95  daydu=1.00
+Nhưng mà Trương Tiểu Biện cũng thật là đen đủi.
+
+# sample_00244.wav  6.91s  ctc=0.97  daydu=1.00
+Đại khái, hắn làm nhiều cái việc bắt gà trộm chó, lúc nào cũng mặt la mày lét, chính khí không có đủ.
+
+# sample_00245.wav  5.64s  ctc=0.86  daydu=1.05
+lúc này đã khom lưng, giả tảng, nhặt gậy đánh chó, mà con chó hoang không có bị mắc lừa.
+
+# sample_00246.wav  5.41s  ctc=0.92  daydu=0.97
+nó thuận thế, nhảy vọt từ trên cái nấm mồ xuống, hùng hổ, vồ vào Trương Tiểu Biện.
+
+# sample_00247.wav  7.74s  ctc=0.93  daydu=1.00
+Trương Tiểu Biện kêu trời một tiếng, nghĩ mình chắc là phải bỏ mạng ở đây rồi chẳng ngờ gò mộ phía sau lưng của hắn.
+
+# sample_00248.wav  7.68s  ctc=0.91  daydu=1.01
+có một khe hở ở chỗ phình ra hình thành một cái hang thiên nhiên bên ngoài cửa hang bị cỏ lát che khuất.
+
+# sample_00249.wav  7.19s  ctc=0.88  daydu=1.01
+có đi đến gần có cũng không có trông rõ lúc ấy hắn đã bị con chó dữ vồ ngã lăn cả người lẫn chó.
+
+# sample_00250.wav  7.18s  ctc=0.92  daydu=0.98
+cùng rơi xuống trong hang mộ khe nứt cái chỗ gò mộ tuy sâu nhưng mà cái chỗ cuốn khe thì lại chật hẹp.
+
+# sample_00251.wav  5.99s  ctc=0.94  daydu=0.99
+Trương Tiểu Biện người gầy gò Cứ thế theo cái đường dốc của khe nứt Mà lăn thẳng xuống dưới.
+
+# sample_00252.wav  7.13s  ctc=0.96  daydu=0.99
+Còn con chó hoang kia Thường nhật hay ăn ruột gan của người chết thân thể to lớn như một con ngé Bị kẹt cứng.
+
+# sample_00253.wav  6.66s  ctc=0.94  daydu=1.00
+ở chỗ đường hẹp giãy giụa một hồi tiến lui đều chẳng được Trương Tiểu Biện giữ được cái mạng.
+
+# sample_00254.wav  7.28s  ctc=0.89  daydu=1.04
+Cũng chẳng có thiết đến Người đang đau như dần. Lúc này đã rơi xuống đến dưới khe nứt Bốn phía tối đen như mực.
+
+# sample_00255.wav  7.41s  ctc=0.89  daydu=1.00
+xòe bàn tay cũng không thấy ngón nhưng mà rốt cuộc mình đang ở đâu chứ hắn cố căng con mắt nhìn.
+
+# sample_00256.wav  6.93s  ctc=0.89  daydu=0.99
+thấy phía xa xa chợt mờ chợt tỏ như có ánh đèn liền mới sóc lại tinh thần mò mẫm đi đến.
+
+# sample_00257.wav  6.85s  ctc=0.92  daydu=0.97
+một loáng sau đi hết cái bờ đất hắn sờ phải một bức tường đá lạnh ghê người rờ rẫm.
+
+# sample_00258.wav  7.50s  ctc=0.90  daydu=0.99
+thấy cái phiến đá to lớn lạ thường hơi bức buốt thấu xương cái tường đá nứt ra một khe hở qua khe hở.
+
+# sample_00259.wav  7.67s  ctc=0.89  daydu=1.00
+thấy đằng sau là một gian điện đá trên tường gắn một dãy đèn chiêu hồn nhỏ như hạt đậu cháy leo lét.
+
+# sample_00260.wav  7.17s  ctc=0.90  daydu=0.95
+trường tiểu biện chẳng cần biết hay dở thế nào cứ thấy quan đèn là chui tọt qua cái khe nứt vào bên trong.
+
+# sample_00261.wav  3.07s  ctc=0.99  daydu=0.97
+đến khi nhìn rõ quang cảnh bên trong minh điện.
+
+# sample_00262.wav  7.37s  ctc=0.88  daydu=1.00
+hắn càng kinh ngạc khôn siết dưới ngọn đèn chiêu hồn đặt cái loại quan tài bằng đá xanh bên trên.
+
+# sample_00263.wav  7.87s  ctc=0.90  daydu=1.04
+là thi hài của một thiếu phụ trẻ chừng mười tám mười chín áo liệm trên người rộng thùng thình đính nhiều vàng bạc.
+
+# sample_00264.wav  7.60s  ctc=0.92  daydu=0.99
+trông đến xa hoa lộng lẫy xem lối phục sức rõ ràng không phải là người thời nay song người thiếu phụ trẻ này.
+
+# sample_00265.wav  6.74s  ctc=0.90  daydu=0.99
+tóc mây da trắng mặt mày thanh tú thoát tục chẳng có giống tử thi đã chết hàng trăm năm cái gì cả.
+
+# sample_00266.wav  7.53s  ctc=0.92  daydu=1.00
+Trương tiểu biện sợ thì vẫn sợ nhưng mà đang lúc đường sinh nhai bế tắc nghèo khổ đói rách chẳng có cái ăn.
+
+# sample_00267.wav  6.16s  ctc=0.94  daydu=1.00
+Trước cái đống châu báu vàng bạc lấp lánh, trong ánh đèn chiêu hồn, sao có thể không động lòng cho được chứ?
+
+# sample_00268.wav  7.43s  ctc=0.90  daydu=1.01
+bày rất nhiều người ngựa bằng giấy hình thù quái dị bên cạnh xác chết còn có một vũng nước xanh biếc trong vắt.
+
+# sample_00269.wav  4.60s  ctc=0.95  daydu=0.98
+Sau một phen chạy trốn vừa rồi, Trương Tiểu Biện thấy miệng khô lưỡi đắng.
+
+# sample_00270.wav  1.55s  ctc=0.98  daydu=1.00
+hơn cả nước Cam Lộ đó.
+
+# sample_00271.wav  3.65s  ctc=0.81  daydu=1.09
+rốt cuộc ra sao, hắn vẫn chưa có từng được nếm thử bao giờ.
+
+# sample_00272.wav  6.47s  ctc=0.92  daydu=0.94
+uống nước xong, đầu óc đã tỉnh táo phần nào, hắn mới tự nhủ, thói đời chẳng gan thì chết no.
+
+# sample_00273.wav  1.81s  ctc=0.94  daydu=0.96
+Cái thằng nhát thì chết đói.
+
+# sample_00274.wav  3.91s  ctc=0.95  daydu=1.00
+Đã là kẻ cùng khổ thì một liều, ba bảy cũng liều.
+
+# sample_00275.wav  6.51s  ctc=0.88  daydu=0.99
+Vậy là hắn mới nổi tà niệm, tiến lại gần cái xác, rút trâm vàng, tháo vòng ngọc, lột hài thêu.
+
+# sample_00276.wav  6.44s  ctc=0.91  daydu=1.01
+lấy hết những thứ đáng giá rồi cởi cả cái tấm áo liệm của thiếu phụ để làm thành cái tay nải.
+
+# sample_00277.wav  6.79s  ctc=0.82  daydu=1.13
+vừa khấn vái với xác để trấn an xem tiểu nương tử vàng bạc đầy người hồi còn sống.
+
+# sample_00278.wav  6.05s  ctc=0.95  daydu=0.95
+hẳn là một quý nhân sung sướng tiểu nhân sinh ra là số khổ rồi ba tháng nay.
+
+# sample_00279.wav  5.71s  ctc=0.90  daydu=1.00
+chưa có được nếm thử cái mùi thịt rồi giờ không có còn kế sinh nhai bất đắc dĩ.
+
+# sample_00280.wav  6.63s  ctc=0.92  daydu=1.01
+đành phải mượn tạm vài thứ linh tinh đổi gạo dầu mắm muối qua ngày xin cô đừng có trách nha.
+
+# sample_00281.wav  6.60s  ctc=0.92  daydu=1.00
+về sao nhược bằng mà tiểu nhân được mở mày mở mặt nhất định sẽ đốt vàng thắp hương tạ ơn cô.
+
+# sample_00282.wav  1.27s  ctc=0.90  daydu=1.00
+đương khi mà lấy vàng ngọc.
+
+# sample_00283.wav  7.58s  ctc=0.88  daydu=0.99
+trương tiểu biện chợt nghe có tiếng mèo kêu ở góc gian điện đá hắn vội vã quay lại nhìn chỉ thấy.
+
+# sample_00284.wav  7.04s  ctc=0.98  daydu=0.99
+trong một góc tối om có một con mèo hoang to tướng bò ra nhưng việc ngoài sức tưởng tượng là con mèo đó.
+
+# sample_00285.wav  7.45s  ctc=0.97  daydu=1.00
+lại phát ra cái tiếng người khóc ai oán như là mưa sầu gió thảm vậy Trương Tiểu Biện đã từng thấy.
+
+# sample_00286.wav  6.55s  ctc=0.91  daydu=1.01
+cảnh đám khóc trước linh cữu khi mà đưa ma con mèo hoang này sao mà lại như đang khóc người chết vậy.
+
+# sample_00287.wav  7.48s  ctc=0.86  daydu=1.00
+chẳng lẽ mèo già đã quá thành yêu tinh sao. Con mèo hoang to con như thế không có trông thấy Trương Tiểu Biện.
+
+# sample_00288.wav  4.83s  ctc=0.94  daydu=1.00
+có thể trong hai con mắt như hai ngọn đèn đỏ cất tiếng khóc thống thiết.
+
+# sample_00289.wav  7.95s  ctc=0.91  daydu=0.97
+trong không gian yên ắng dưới lòng đất tiếng mèo khóc the thé chói tai khiến cho từ sâu trong lòng của Trương Tiểu Biện cảm thấy.
+
+# sample_00290.wav  7.56s  ctc=0.88  daydu=1.01
+hết sức là bực mình con mèo già này mà cũng dọa ma dọa quỷ sao, tự dưng trong lòng liền nảy sinh ác ý.
+
+# sample_00291.wav  7.53s  ctc=0.92  daydu=0.99
+nghĩ đến đây nhân lúc con mèo hoang không có đề phòng hắn bất ngờ cầm cả cái tay nải chứa đầy vàng bạc châu báu.
+
+# sample_00292.wav  7.57s  ctc=0.91  daydu=0.98
+đè nghiến nó xuống chỉ thấy con mèo hoang giãy giụa một hồi đã bị đè chết luôn tại chỗ Trương Tiểu Biện mới nghĩ thầm.
+
+# sample_00293.wav  7.93s  ctc=0.88  daydu=1.00
+bây giờ đang đói đến nỗi không có nhấc chân nổi về cái làng Kim Quang nữa Tam Gia Ta đã làm thì làm cho trót.
+
+# sample_00294.wav  7.50s  ctc=0.88  daydu=1.05
+cứ thịt con mèo già thành tinh này đi để tế cái dạ dày của mình xem rốt cuộc đọa hành con mèo già hay là.
+
+# sample_00295.wav  6.46s  ctc=0.88  daydu=0.98
+của Tam Gia Ta thâm hậu hơn chứ Trương Tiểu Biện to gan lớn mật ý mình hồi trước.
+
+# sample_00296.wav  7.84s  ctc=0.90  daydu=1.02
+cũng từng theo học một lão đạo sĩ học về bùa bắt quỷ chẳng có thèm để ý đến mấy cái chuyện âm ti địa phủ cái gì đó.
+
+# sample_00297.wav  6.44s  ctc=0.91  daydu=1.03
+Hắn mổ bụng lột da con mèo hoang, sơ chế một hồi rồi mới nhổ ngọn đèn chiếu mệnh trên tường ra.
+
+# sample_00298.wav  5.09s  ctc=0.89  daydu=1.02
+Gom mấy con ngựa giấy dạng hương, nhóm lửa, đem cái thịt mèo quay quay nướng nướng.
+
+# sample_00299.wav  7.65s  ctc=0.93  daydu=1.01
+Không ngờ tay nghề chẳng có tới nơi tới chốn nướng cháy hết thịt mèo. Phần bên ngoài cháy xém thành một lớp than đen.
+
+# sample_00300.wav  2.63s  ctc=0.97  daydu=1.00
+Nhưng mà trương tiểu biện đã đói cuốn cả lên rồi.
+
+# sample_00301.wav  2.02s  ctc=0.93  daydu=1.04
+Cái thằng đói chẳng kén thức ăn.
+
+# sample_00302.wav  2.27s  ctc=0.84  daydu=1.03
+Phàm ngửi cũng đã thấy thơm nức rồi.
+
+# sample_00303.wav  2.56s  ctc=0.97  daydu=1.00
+Chẳng cần biết có cháy hay là không cháy.
+
+# sample_00304.wav  2.31s  ctc=0.94  daydu=1.00
+Há miệng định đớp một miếng mèo nướng.
+
+# sample_00305.wav  5.10s  ctc=0.78  daydu=0.98
+Bỗng có một đôi bàn tay lạnh ngắt như băng bấm vào cổ của hắn từ phía sau.
+
+# sample_00306.wav  3.24s  ctc=0.84  daydu=1.04
+và giọng âm u cất lên Thằng kia.
+
+# sample_00307.wav  2.92s  ctc=0.89  daydu=1.05
+Ngươi có thấy con mèo hoang ở trong cung của ta không?
+
+# sample_00308.wav  4.70s  ctc=0.94  daydu=0.98
+Hả? Này! Cái thằng ranh chết yểu nhà mày đang nướng cái gì đó?
+
+# sample_00309.wav  2.45s  ctc=0.98  daydu=1.00
+Trương tiểu biện sợ hãi rụng rời.
+
+# sample_00310.wav  2.79s  ctc=0.94  daydu=1.00
+Gan có to bằng trời cũng không có chịu nổi nữa.
+
+# sample_00311.wav  7.69s  ctc=0.93  daydu=1.01
+Định vẽ bùa niệm chú Nhưng mà trong đầu trống trơn Chẳng có nghĩ ra cái gì Đành phải buột miệng trả lời luôn Không, không.
+
+# sample_00312.wav  6.45s  ctc=0.93  daydu=0.99
+không thấy Đang nướng, đang nướng gà Chỉ thấy sau lưng Có một luồng hơi lạnh phả vào.
+
+# sample_00313.wav  1.79s  ctc=0.85  daydu=1.00
+Toàn thân của hắn rung lên cầm cập.
+
+# sample_00314.wav  6.63s  ctc=0.92  daydu=1.01
+Mồ hôi ở lỗ chân lông Tưởng như là đóng lại thành băng Giọng nữ ở phía sau Tiếp tục cật giắng.
+
+# sample_00315.wav  7.78s  ctc=0.86  daydu=0.99
+Nướng gà, sao mà lại có bốn chân vậy Trương tiểu biện Vẫn bướng bỉnh vặn lại Tam gia nướng hai con gà.
+
+# sample_00316.wav  2.61s  ctc=0.95  daydu=1.00
+Hai con gà nướng thì có bốn chân chứ.
+
+# sample_00317.wav  7.36s  ctc=0.88  daydu=1.02
+Chương ba Sát phượng Con ma phía sau Nào có chịu tin lời Đôi tay lớn lạnh lẽo.
+
+# sample_00318.wav  7.28s  ctc=0.85  daydu=0.96
+tựa như là cái móc sắt tàn độc, khóa chặt yết hầu của Trương tiểu biện hắn thấy cổ đã bị thích lại vội vàng.
+
+# sample_00319.wav  7.33s  ctc=0.91  daydu=1.01
+gắng sức để mà gỡ đôi tay ma đó ra Nhưng mà sức yếu Lại thêm bị đói mấy ngày Làm sao mà giằng ra cho nổi.
+
+# sample_00320.wav  4.24s  ctc=0.91  daydu=1.00
+trắng dã lưỡi thè ra Quỷ Vô Thường đã tới lấy mạng.
+
+# sample_00321.wav  6.74s  ctc=0.84  daydu=1.03
+cho hắn luyến tiếc dương gian. Tưởng chừng như ba hồn bảy vía của Trương tiểu biện đã sắp sửa rời xác.
+
+# sample_00322.wav  1.56s  ctc=0.98  daydu=1.00
+để trở thành một oan hồn.
+
+# sample_00323.wav  9.12s  ctc=0.90  daydu=1.01
+dưới chân thành cung điện chính lúc sống chết chỉ trong đường tơ kẽ tóc bỗng có một tiếng nổ như sấm lớn đất đá trong điện.
+
+# sample_00324.wav  7.27s  ctc=0.91  daydu=1.00
+phá thủng một cái lỗ lớn từ bên ngoài. Trương Tiểu Biện bị sặc cát bụi, nước mắt, nước mũi chảy giàn giụa.
+
+# sample_00325.wav  7.86s  ctc=0.93  daydu=1.00
+hai tai bị cái tiếng nổ ù cả lên đôi tai ma trên cổ cũng đã biến mất không có tăm tích nhưng mà vừa loáng thoáng.
+
+# sample_00326.wav  7.28s  ctc=0.93  daydu=1.00
+nghe thấy tiếng người sau bức tường bị địa lôi phá dở Trương Tiểu Biện lập tức ngã lăn ra đất giả chết.
+
+# sample_00327.wav  6.30s  ctc=0.92  daydu=0.97
+hắn phiêu bạc giang hồ đã lâu cho nên rất nhanh trí hiểu ngay có người đang tới trộm mộ.
+
+# sample_00328.wav  4.06s  ctc=0.95  daydu=0.52
+nếu để chúng thấy trong cái gian thạch thất này có thêm một người sống chắc.
+
+# sample_00329.wav  10.04s  ctc=0.89  daydu=1.03
+cái mạng của hắn sẽ phải toi đời ngộ biến phải tùng quyền chỉ còn cách nằm thẳng cẳng giữa cái đống đổ nát mấy năm nay chiến tranh liên miên.
+
+# sample_00330.wav  5.25s  ctc=0.92  daydu=1.00
+Người chết đầy khắp nơi Hắn đã nhiều lần trông thấy cái xác chết Chẳng có ai thu nhặt.
+
+# sample_00331.wav  6.24s  ctc=0.89  daydu=1.02
+nằm ngổn ngang. Vì vậy giả làm cái xác chết cũng khá giống đó. Thật rõ khéo.
+
+# sample_00332.wav  6.43s  ctc=0.94  daydu=1.00
+Đúng là Trương Tiểu Biện đã đoán. Thì ra có hai tên trộm đã nghe ngóng trong bãi tha ma làng Kim Hoàng.
+
+# sample_00333.wav  5.11s  ctc=0.90  daydu=0.96
+có một ngôi mộ triều trước. Sau khi mà lần ra dấu vết và ra sức tìm kiếm.
+
+# sample_00334.wav  2.93s  ctc=0.94  daydu=1.00
+chúng đã đào được một cái hang dẫn vào tới nơi.
+
+# sample_00335.wav  3.85s  ctc=0.94  daydu=0.98
+Trộm mộ là công việc lén lút, muốn vội cũng chẳng được.
+
+# sample_00336.wav  3.17s  ctc=0.97  daydu=1.00
+Đâu phải là cái chuyện ngày một, ngày hai mà làm xong.
+
+# sample_00337.wav  7.11s  ctc=0.95  daydu=1.01
+Lại chỉ có thích hợp làm vào đêm khuya, phải mất hơn nửa tháng trời, chúng mới có thể đào được đến tầng gạch mộ.
+
+# sample_00338.wav  3.78s  ctc=0.89  daydu=1.00
+Canh ba đêm nay, hai cái tên trộm mộ mang theo đồ nghề.
+
+# sample_00339.wav  7.81s  ctc=0.88  daydu=1.04
+tiếp tục lẻn vào trong hang, dùng địa lôi để phá tường mộ thấy ngọn đèn chiêu hồn ở trong minh điện dẫn sáng.
+
+# sample_00340.wav  7.88s  ctc=0.92  daydu=1.00
+liệu chừng bên trong không có khí độc chúng mới liền thắp đuốc đi vào một tên khoác áo tơi bước vào trước tiên.
+
+# sample_00341.wav  6.83s  ctc=0.91  daydu=0.97
+hắn thấy ở cửa hang có thiếu niên da bọc xương, mặt mũi lem luốc nằm ngây đơ, rõ là một xác chết.
+
+# sample_00342.wav  1.94s  ctc=0.93  daydu=0.97
+không nén nổi ngạc nhiên mới thốt lên.
+
+# sample_00343.wav  7.14s  ctc=0.83  daydu=0.97
+Quý Phi nương nương trong mộ kim quang lại có một tên đồng tử bồi tán theo sao có điều cái thằng này.
+
+# sample_00344.wav  7.81s  ctc=0.96  daydu=0.99
+hơi lớn thì phải đồng tử tuẫn táng theo phải dưới mười tuổi mới đúng chứ gã trộm mộ ở đằng sau mới vội giục.
+
+# sample_00345.wav  7.27s  ctc=0.94  daydu=0.98
+có khi đó là một tiểu thái giám chưa biết chừng đó hiền đệ chớ có hỏi nhiều chốn minh điện này kỵ nhất.
+
+# sample_00346.wav  7.97s  ctc=0.92  daydu=1.00
+hai cái chữ tò mò đó mau lấy các cái đồ tùy táng rồi rút cho sớm sửa đi may ra kịp về quang hoa lâu.
+
+# sample_00347.wav  2.99s  ctc=0.98  daydu=0.97
+ở trong thành tìm mấy cái em chơi bời cho đã.
+
+# sample_00348.wav  5.88s  ctc=0.94  daydu=1.01
+Hai cái tên trộm mộ nóng lòng phát tài cho nên không có xem kỹ Trương Tiểu Biện đang giả chết.
+
+# sample_00349.wav  6.31s  ctc=0.94  daydu=1.00
+Trước tiên, chúng đi quanh điện một dòng thấy phía tường hậu bị động đất làm nứt ra một cái khe hở.
+
+# sample_00350.wav  3.19s  ctc=0.95  daydu=1.00
+không đủ cho người lớn lọt qua cũng không có thèm để tâm.
+
+# sample_00351.wav  6.97s  ctc=0.96  daydu=1.01
+Quay thẳng ra cái chỗ bệ đá thấy chẳng có quan quách gì ngoài thi thể của một thiếu phụ trẻ tuổi áo trắng.
+
+# sample_00352.wav  2.48s  ctc=0.94  daydu=0.97
+Không có đồ trang sức nằm trơ một bên.
+
+# sample_00353.wav  2.17s  ctc=0.94  daydu=1.00
+Hai gã trộm hết đổi kinh ngạc.
+
+# sample_00354.wav  3.06s  ctc=0.93  daydu=0.92
+Vì thi thể đã được bảo quản quá hoàn hảo đi.
+
+# sample_00355.wav  2.16s  ctc=0.99  daydu=1.00
+Chẳng khác nào người đang nằm ngủ.
+
+# sample_00356.wav  3.08s  ctc=0.96  daydu=1.00
+Tưởng chừng chỉ cần sơ ý, làm kinh động.
+
+# sample_00357.wav  4.96s  ctc=0.93  daydu=1.02
+là có thể đánh thức bà Quý Phi. Những xác chết mà không rữa không khô.
+
+# sample_00358.wav  2.23s  ctc=0.99  daydu=1.00
+Một là do oán hận không tiêu.
+
+# sample_00359.wav  1.88s  ctc=0.88  daydu=1.00
+Hai là hóa thành cương thi.
+
+# sample_00360.wav  3.02s  ctc=0.95  daydu=1.04
+Ba là bị chết mờ ám, chờ được rửa oan.
+
+# sample_00361.wav  2.74s  ctc=0.98  daydu=0.97
+Chẳng hiểu là bà Quý Phi này ra sao nữa.
+
+# sample_00362.wav  6.65s  ctc=0.89  daydu=1.00
+lạ lùng là ở chỗ, một là không có quan quách, hai là không có đồ bồi táng. Tương truyền năm xưa.
+
+# sample_00363.wav  16.23s  ctc=0.93  daydu=1.01
+Cũng có một người mai táng đơn sơ bằng áo giấy và quan tài giấy. Có lẽ bao nhiêu năm qua, quang quách bằng giấy đã mục nát hết cả rồi. Xong không có đồ đạc chôn theo thì thật khiến cho người ta bực mình. Đã trót uổng phí bao công sức.
+
+# sample_00364.wav  2.20s  ctc=0.94  daydu=1.00
+Chẳng lẽ là về tay không chứ?
+
+# sample_00365.wav  5.18s  ctc=0.91  daydu=1.02
+nằm dưới đất nghe thấy hai cái tên trộm ngoác mồm chửi bới hắn mới nghĩ thầm.
+
+# sample_00366.wav  2.11s  ctc=0.98  daydu=1.00
+Hai cái gã này chẳng có biết cái gì.
+
+# sample_00367.wav  4.90s  ctc=0.96  daydu=0.98
+Cả bao tiền vàng trang sức đã bị tam gia nhà ta gói ghém hết rồi.
+
+# sample_00368.wav  1.52s  ctc=0.95  daydu=1.05
+Đang giấu mình dưới đây này.
+
+# sample_00369.wav  3.18s  ctc=0.93  daydu=0.97
+Các người đã trộm hụt thì đừng có nấn ná nữa.
+
+# sample_00370.wav  2.60s  ctc=0.89  daydu=1.00
+Mau, biến nhanh đi. Biến nhanh đi chứ.
+
+# sample_00371.wav  2.04s  ctc=0.97  daydu=1.00
+Hắn mong cho hai cái tên trộm bỏ đi.
+
+# sample_00372.wav  2.80s  ctc=0.93  daydu=1.00
+Cho nhanh. Vì giả chết đã lâu quá rồi.
+
+# sample_00373.wav  3.76s  ctc=0.94  daydu=1.00
+Cơ thể nằm trên cái đống gạch đã bắt đầu thấy ê ẩm.
+
+# sample_00374.wav  2.10s  ctc=0.97  daydu=0.96
+Muốn thở mạnh cũng không dám.
+
+# sample_00375.wav  4.38s  ctc=0.87  daydu=1.00
+không có thể chịu nổi nữa. Vẫn có câu, cướp chẳng có về không.
+
+# sample_00376.wav  2.38s  ctc=0.91  daydu=1.00
+Hai tên trộm sao chịu bỏ qua chứ.
+
+# sample_00377.wav  3.29s  ctc=0.90  daydu=1.07
+Thấy trên người của quý phi nương nương còn có mấy bộ quần áo.
+
+# sample_00378.wav  3.29s  ctc=0.96  daydu=1.00
+Liền hợp sức dùng dây thừng trói xác phượng lại.
+
+# sample_00379.wav  3.09s  ctc=0.91  daydu=1.00
+đáng thương thay, quý phi ngậm hờn mà chết.
+
+# sample_00380.wav  2.95s  ctc=0.92  daydu=1.00
+Chiếc thân chín suối còn chưa có hóa hết hình hài.
+
+# sample_00381.wav  7.55s  ctc=0.90  daydu=1.01
+Tới bây giờ, còn bị hai cái tên trộm lột lõa lồ không còn mảnh vải. Hai tên trộm lấy xong quần áo.
+
+# sample_00382.wav  7.20s  ctc=0.93  daydu=1.00
+còn cạy miệng lấy ngọc ngậm trong mồm và nhét trong hậu môn những thứ mà lúc nãy Trương Tiểu Biện chưa lấy.
+
+# sample_00383.wav  7.70s  ctc=0.95  daydu=1.00
+đương định bỏ đi chợt thấy xác phượng đã bị lột trần kia đúng là một tấm thân ngọc ngà tuyệt sắc đang nằm thiêm thiếp.
+
+# sample_00384.wav  7.51s  ctc=0.92  daydu=1.01
+chẳng có giống người chết chút nào chúng bỗng thấy người nóng ran lên dục vọng trỗi dậy nảy sinh tà niệm.
+
+# sample_00385.wav  7.24s  ctc=0.88  daydu=1.03
+định dở trò đồi bại dưới xác chết hai gã đào trộm mộ từ xưa tới nay chưa có từng trúng quả nào lớn.
+
+# sample_00386.wav  3.57s  ctc=0.96  daydu=1.00
+Những tử thi trong quan tài không phải là rữa thì cũng thối.
+
+# sample_00387.wav  3.84s  ctc=0.84  daydu=0.97
+Hoặc giả đã nát bấy, chừa lại mấy khúc xương.
+
+# sample_00388.wav  2.96s  ctc=0.93  daydu=0.97
+Còn cái bà quý phi này là loại người nào chứ?
+
+# sample_00389.wav  6.53s  ctc=0.87  daydu=1.03
+Là đàn bà mà hoàng thượng mới có thể ôm ấp đi ngủ. đêm nay thật là cơ hội trời cho.
+
+# sample_00390.wav  1.85s  ctc=0.91  daydu=0.93
+Cứ xong không nếm thử qua một chút.
+
+# sample_00391.wav  3.44s  ctc=0.88  daydu=1.00
+mùi vị của cái thằng cha hoàng đế xem rốt cuộc thế nào.
+
+# sample_00392.wav  3.90s  ctc=0.87  daydu=1.00
+Càng nghĩ càng thấy toàn thân nóng ran, miệng khô lưỡi đắng.
+
+# sample_00393.wav  6.27s  ctc=0.89  daydu=1.01
+Hai cái gã mới tiện tay, giật uống mấy ngụm nước mát trong ao, hồng mong nước mát sẽ đè nén dục vọng.
+
+# sample_00394.wav  5.99s  ctc=0.86  daydu=1.00
+đang dâng lên trong lòng nói gì thì chúng chưa có bao giờ dở trò đồi bại với xác chết.
+
+# sample_00395.wav  7.50s  ctc=0.94  daydu=1.00
+có điều đối mặt với tứ khoái thì họa may có thần tiên mới bỏ được, đứng trước cái xác chết đẹp tuyệt trần thế này.
+
+# sample_00396.wav  6.13s  ctc=0.87  daydu=0.99
+mấy ngụm nước vừa rồi chừng như không có thấm vào đâu mà còn khiến cho dục vọng trỗi dậy nhanh hơn.
+
+# sample_00397.wav  4.99s  ctc=0.88  daydu=1.08
+chuyện gì đến sẽ đến chỉ có trời đất mới biết thôi, mày biết, tao biết.
+
+# sample_00398.wav  6.83s  ctc=0.93  daydu=0.98
+Còn phải do dự cái gì nữa chứ? Tú Tài gặp nhau nói chuyện chữ nghĩa, Đồ Tể gặp nhau.
+
+# sample_00399.wav  5.32s  ctc=0.96  daydu=0.98
+nói chuyện giết lợn, hai gã trộm mộ ở cùng với nhau thì bàn cái gì đứng đắn.
+
+# sample_00400.wav  7.23s  ctc=0.94  daydu=1.00
+Chúng mới sóc tinh thần cho nhau, rồi mới dùng dây gai, treo cái cổ, buộc chặt hai cái tay lại, đề phòng cái xác.
+
+# sample_00401.wav  5.65s  ctc=0.96  daydu=1.00
+có điều gì cổ quái, sau đó hai tên mới nở nụ cười gian xảo, treo lên bệ đá.
+
+# sample_00402.wav  4.98s  ctc=0.87  daydu=1.00
+Định bụng làm một phen sung sướng, phong lưu như cái thằng cha hoàng đế kia.
+
+# sample_00403.wav  3.02s  ctc=0.97  daydu=1.00
+Trương Tiểu Biện nằm ở góc điện không có chịu nổi nữa.
+
+# sample_00404.wav  5.04s  ctc=0.92  daydu=0.98
+Nghe thấy hai cái tên trộm cười hỉ hả, chuẩn bị gian dâm giới sát quý phi.
+
+# sample_00405.wav  4.79s  ctc=0.85  daydu=1.03
+Trong bụng của hắn cũng có một chút tò mò, nhưng mà lại không có dám sơ suất vận động.
+
+# sample_00406.wav  7.51s  ctc=0.92  daydu=0.99
+Chỉ e làm kinh động hai gã kia. Chợt trong phút chốc, gian mộ bổng nhiên, im bặt, chẳng có động tĩnh gì.
+
+# sample_00407.wav  7.65s  ctc=0.91  daydu=1.00
+Hai cái tên trộm mộ nọ Đột nhiên biến mất Hắn không khỏi vừa hoảng vừa nghĩ Lại bứt rứt chờ đợi một lúc.
+
+# sample_00408.wav  7.42s  ctc=0.97  daydu=1.00
+Thấy ở trong minh điện Vẫn không có động tĩnh gì Mới nhè nhẹ quay đầu lên nhìn Chỉ thấy hai cái tên trộm.
+
+# sample_00409.wav  7.98s  ctc=0.84  daydu=1.00
+Nằm phục trên cái xác lõa lồ của quý phi mỗi tên tay nắm một cán dao Đâm vào ngực của đối phương Trên mặt.
+
+# sample_00410.wav  7.94s  ctc=0.90  daydu=1.02
+vẫn còn cứng đờ Một cái nụ cười dâm đãng Máu chảy lên láng trên mặt đất chẳng ngờ chúng đã chết được một lúc lâu.
+
+# sample_00411.wav  4.40s  ctc=0.94  daydu=1.02
+trương tiểu biện vốn không có biết duyên cớ bên trong nhưng mà khi ngồi dậy.
+
+# sample_00412.wav  7.30s  ctc=0.87  daydu=1.01
+nhìn thì chẳng thấy con mèo già đã bị nướng đi đâu nữa cũng đã đoán được một hai phần thứ nước ma đó.
+
+# sample_00413.wav  7.87s  ctc=0.95  daydu=0.98
+không có thể uống bừa uống bãi bằng không sẽ có ác quỷ theo đuôi hắn hết sức sợ hãi mới vội đứng bật dậy.
+
+# sample_00414.wav  6.30s  ctc=0.90  daydu=0.95
+định nhặt cái tay nải châu báu kia rồi cướp đường bỏ chạy chẳng ngờ vừa sờ tay vào.
+
+# sample_00415.wav  15.53s  ctc=0.84  daydu=1.01
+mà chạm phải một cái vật sống đầy lông mềm mềm. ngọn đèn chiêu hồn ở trong điện chập chờn trực tắt. Tiếng mèo âm u lại vọng về từ phía sau. Đúng là… Chương bốn Lâm Trung Lão Quỷ.
+
+# sample_00416.wav  4.25s  ctc=0.98  daydu=0.19
+bất giác mới chửi thầm đá mọc lông gà trống đẻ.
+
+# sample_00417.wav  7.71s  ctc=0.93  daydu=0.99
+Hay là tại kiếp trước ta không có nên thân chứ. Sao mà bao nhiêu quái sự trong cái gầm trời này cứ nhè đầu của tam gia ta.
+
+# sample_00418.wav  3.31s  ctc=0.91  daydu=1.00
+mà đổ xuống vậy. Chà bố cái con mèo chết bầm.
+
+# sample_00419.wav  2.27s  ctc=0.96  daydu=1.00
+Đừng có mà ám ông mày mãi mãi nha.
+
+# sample_00420.wav  2.53s  ctc=0.92  daydu=1.00
+Mặc dù là trong bụng lầm rầm chửi bới.
+
+# sample_00421.wav  2.94s  ctc=0.98  daydu=1.00
+Nhưng mà thật ra hắn đang sợ hãi tột độ.
+
+# sample_00422.wav  6.91s  ctc=0.87  daydu=1.01
+Ba hồn bảy vía lên mây cả rồi. Chỉ giận cái đôi chân không có mọc cánh để mau chóng rời khỏi cái chỗ này.
+
+# sample_00423.wav  3.42s  ctc=0.87  daydu=1.03
+Xong, vì quá khiếp đảm, cộng thêm cái bụng đã lâu.
+
+# sample_00424.wav  7.44s  ctc=0.92  daydu=1.03
+Chưa có được xơi cái gì tuy muốn trốn chạy Chỉ hiềm là lực bất tòng tâm Trong lúc tinh thần hoảng hốt.
+
+# sample_00425.wav  2.98s  ctc=0.94  daydu=0.97
+mới tự dưng cảm thấy có một con mèo hoang to.
+
+# sample_00426.wav  5.05s  ctc=0.88  daydu=1.00
+đang trèo lên đỉnh đầu của hắn hắn ngỡ con mèo đó là ma quỷ biến ra.
+
+# sample_00427.wav  7.77s  ctc=0.93  daydu=0.99
+Luồn lên luột xuống một lúc Giữa đỉnh đầu và vai Trương Tiểu Biện chửi thầm con mèo chết bầm Khinh người quá đáng.
+
+# sample_00428.wav  6.17s  ctc=0.87  daydu=1.07
+lại không có dám làm cái gì cả Đúng lúc ấy Trong góc gian mộ Bỗng có một người nhổm dậy.
+
+# sample_00429.wav  7.00s  ctc=0.89  daydu=0.97
+Ngôi mộ của bà Phi chết oan này. Bốn góc đều mờ mịt âm mưu Chẳng có trông thấy gì Trương tiểu biện.
+
+# sample_00430.wav  6.87s  ctc=0.96  daydu=1.01
+Nào ngờ ở đó còn có một người ẩn nấp Hơn thế nữa Người này nhất định là đã có mặt trước khi mà hắn.
+
+# sample_00431.wav  7.45s  ctc=0.97  daydu=1.00
+Và hai cái tên trộm mộ tới đây Có trời mới biết Kẻ đó là người hay là ma quỷ nữa Hắn vô cùng kinh hãi.
+
+# sample_00432.wav  7.62s  ctc=0.92  daydu=0.99
+chẳng biết nên làm thế nào cho phải đây đành phải ngồi lặng một chỗ theo dõi động tĩnh của người kia đã đến nước này.
+
+# sample_00433.wav  6.80s  ctc=0.96  daydu=0.97
+hắn chẳng có quản gì cái chuyện sống chết nữa đành mặc cho số mệnh an bài thôi chỉ thấy người kia.
+
+# sample_00434.wav  7.41s  ctc=0.90  daydu=1.01
+thân thể gầy guộc nhỏ bé nhìn cái dạng hình như là một ông lão già nua trên người khoác một tấm áo choàng.
+
+# sample_00435.wav  6.57s  ctc=0.88  daydu=0.98
+màu tro rách rưới tả tơi che mặt bằng một miếng vải đen chẳng có thể đoán ra tuổi tác.
+
+# sample_00436.wav  7.12s  ctc=0.98  daydu=0.99
+chỉ để lộ có đôi mắt nhoan nhoán như chớp nhìn thế nào cũng không có giống người sống trương tiểu biện.
+
+# sample_00437.wav  7.80s  ctc=0.97  daydu=1.00
+nhìn cái tướng mạo người đó lòng thấy bất an chẳng trách quý phi tiểu nương tử không có quan tài thi thể.
+
+# sample_00438.wav  7.14s  ctc=0.93  daydu=0.96
+để trơ trơ trên bệ thì ra là cổ quan tài đó đã tu luyện thành tinh rồi biến thành một lão già gầy guộc.
+
+# sample_00439.wav  7.13s  ctc=0.91  daydu=1.07
+tốt đã chẳng đến đến thời chẳng tốt lão già kia xuất hiện đúng vào cái lúc này chỉ e là muốn muốn.
+
+# sample_00440.wav  1.76s  ctc=0.86  daydu=1.05
+lấy cái mạng tam gia ta sao?
+
+# sample_00441.wav  6.06s  ctc=0.92  daydu=1.00
+Nhưng cái ông lão gầy gò, từ trong góc tường đi ra, lại chẳng có thèm để ý đến Trương Tiểu Biện.
+
+# sample_00442.wav  4.24s  ctc=0.88  daydu=1.04
+Lão đến thẳng cái chiếc giường đá, vái cái xác một cái, sau đó.
+
+# sample_00443.wav  7.31s  ctc=0.92  daydu=1.00
+thêm chút dầu cho đĩa đèn chiêu hồn trên tường, làm không gian trong mộ sáng sủa hơn, rồi mò mẫm một lúc.
+
+# sample_00444.wav  3.75s  ctc=0.87  daydu=1.00
+trên xác của hai tên trộm xấu số kia, lấy ra một bao lương khô.
+
+# sample_00445.wav  5.13s  ctc=0.90  daydu=1.00
+Lão già, cầm bọc lương khô, rung rảy, đi tới trước mặt của Trương Tiểu Biện.
+
+# sample_00446.wav  5.63s  ctc=0.94  daydu=1.00
+ném mấy cái bánh lương khô xuống cho hắn rồi cũng chẳng có thèm nói câu nào cứ giương đôi mắt.
+
+# sample_00447.wav  5.61s  ctc=0.85  daydu=1.00
+nhìn tròng trọc vào trương tiểu biện dò xét đôi mắt lấp loáng của lão nhìn chằm chằm.
+
+# sample_00448.wav  7.18s  ctc=0.92  daydu=1.01
+dường như là thấu đến tận xương tủy của người ta đến nỗi Trương Tiểu Biện nổi da gà toàn thân khó chịu.
+
+# sample_00449.wav  7.61s  ctc=0.92  daydu=1.01
+đỉnh đầu của Trương Tiểu Biện vẫn dắt dẻo con mèo hắn hết nhìn cái lão già trước mặt lại ngó mấy cái bánh lương khô.
+
+# sample_00450.wav  7.00s  ctc=0.92  daydu=0.99
+ở trên mặt đất Tự dưng cơn đói bụng nổi lên Đã là bước đường cùng Thì chí khí cũng hết.
+
+# sample_00451.wav  7.33s  ctc=0.93  daydu=0.99
+Lão yêu tinh quan tài Ném lương khô ra đây Chắc hẳn là cho Trương Tam Gia ta ăn rồi Ở đời.
+
+# sample_00452.wav  6.14s  ctc=0.91  daydu=0.97
+cũng có lúc Phải là khom lưng uốn gối chứ Hắn mới vội vã Thò tay ra nhặt mấy cái bánh.
+
+# sample_00453.wav  6.32s  ctc=0.86  daydu=1.00
+tọng vào cả cái mồm mình tuy mấy cái bánh đều đã khô nứt nẻ nhưng mà Trương Tiểu Biện hiểu rằng.
+
+# sample_00454.wav  1.65s  ctc=0.91  daydu=0.96
+Cái thứ nước suối trong mộ này.
+
+# sample_00455.wav  7.14s  ctc=0.94  daydu=1.00
+Không có thể tùy tiện uống vào được. Đành phải trợn mắt, cố nuốt hết vào trong bụng. Hắn vừa ăn nhồm nhoàm.
+
+# sample_00456.wav  6.18s  ctc=0.89  daydu=1.07
+vừa tự an ủi mình người không có thể chống lại mệnh xem ra trước mắt của tam gia.
+
+# sample_00457.wav  6.95s  ctc=0.92  daydu=1.01
+Còn phải vất vả thêm một thời gian nữa. tục ngữ có câu, chớ khinh thiếu niên nghèo. Người còn ít tuổi.
+
+# sample_00458.wav  0.89s  ctc=0.98  daydu=1.00
+Người có lúc.
+
+# sample_00459.wav  3.43s  ctc=0.97  daydu=1.03
+Đến lúc đó, hôm nào chẳng có thịt mà xơi chứ.
+
+# sample_00460.wav  7.92s  ctc=0.92  daydu=1.00
+Trương Tiểu Biện không có để ý đến lão già đang chăm chú nhìn mình, chỉ cốt sao cho đầy bụng thôi, nhưng mà hắn chợt nghĩ.
+
+# sample_00461.wav  7.93s  ctc=0.96  daydu=0.96
+thôi chết, lão quan tài thành tinh này chắc là đang thèm ăn gan, uống máu của ta đây, lão thấy ta gầy guộc.
+
+# sample_00462.wav  2.41s  ctc=0.82  daydu=1.10
+cho nên mới vỗ béo trước rồi ăn thịt Sao?
+
+# sample_00463.wav  6.79s  ctc=0.90  daydu=1.04
+Nghĩ tới đây, hắn bỗng hốt hoảng, ngước nhìn cái lão già che mặt, đứng đằng trước, trong miệng lúng búng.
+
+# sample_00464.wav  3.13s  ctc=0.94  daydu=1.00
+mấy cái miếng bánh khô nhưng mà không có dám tiếp tục nhai nữa.
+
+# sample_00465.wav  2.13s  ctc=0.84  daydu=1.10
+Lão già nọ mới chợt cất tiếng.
+
+# sample_00466.wav  4.52s  ctc=0.92  daydu=1.00
+Kẻ hậu sinh, chớ có sợ hãi, ngươi có biết lão phu đây là ai không?
+
+# sample_00467.wav  4.79s  ctc=0.92  daydu=1.00
+Tiếng của lão rào rạo như là tiếng cưa gỗ, nghe cổ quái lạ thường.
+
+# sample_00468.wav  7.60s  ctc=0.85  daydu=1.00
+Trương Tiểu Biện thấy yêu quái quan tài đã mở mồm nói thầm nghĩ nếu có thể cởi mở với lão chuyện này mười phần.
+
+# sample_00469.wav  6.64s  ctc=0.91  daydu=1.00
+chắc tám có cơ hội xoay chuyển hắn thường lưu lạc khắp nơi thấy được cái sự đời cho nên.
+
+# sample_00470.wav  6.84s  ctc=0.94  daydu=0.98
+cũng ít nhiều hiểu được lẽ thói đời ấm lạnh mấy cái lối a dua bợ đỡ cũng biết cả.
+
+# sample_00471.wav  7.07s  ctc=0.86  daydu=1.02
+đi với bụt mặc áo cà sa đi với ma mặc áo giấy vả lại hắn cũng khá là khỏe mồm.
+
+# sample_00472.wav  6.99s  ctc=0.94  daydu=1.01
+miệng trơn như là bôi mỡ giờ nghe lão già nói như thế mới vội cố nuốt ực một miếng bánh trong miệng, đáp thẳng.
+
+# sample_00473.wav  3.52s  ctc=0.98  daydu=1.00
+tiểu nhân là Trương Tam tuy không có biết lão tiền bối là ai.
+
+# sample_00474.wav  7.13s  ctc=0.96  daydu=0.99
+nhưng mà rõ là người nghĩa khí đường đường chắc hẳn là một trung hào kiệt ngày nay lão già nghe như thế.
+
+# sample_00475.wav  7.33s  ctc=0.89  daydu=1.03
+biết rằng Trương Tiểu Biện không có rõ lai lịch của mình mới liền gật đầu dẫn Trương Tiểu Biện lại cái phía tường mộ.
+
+# sample_00476.wav  7.00s  ctc=0.86  daydu=1.00
+dùng tay áo làm lau hết bụi bặm trên tường lộ ra một mảng bích họa đầy màu sắc rực rỡ.
+
+# sample_00477.wav  7.61s  ctc=0.93  daydu=0.98
+trong tranh vẽ vô số mèo, mèo hoang, mèo trắng, mèo đen có con đang ngủ có con nô đùa.
+
+# sample_00478.wav  7.54s  ctc=0.95  daydu=1.01
+hoặc là võ chim sẻ muôn hình dạng trạng tuy là thần thái khác nhau nhưng mà đều sống động như thật thì ra.
+
+# sample_00479.wav  2.03s  ctc=0.88  daydu=1.04
+là một bức bách miêu đồ thật đẹp.
+
+# sample_00480.wav  7.38s  ctc=0.94  daydu=1.01
+Trương Tiểu Biện ngấm ngầm lè lưỡi chắc là quý phi tiểu nương nương này nuôi nhiều mèo trong cung lắm chết rồi.
+
+# sample_00481.wav  7.29s  ctc=0.90  daydu=1.01
+vẫn còn muốn vẽ chúng lên vách mộ mà để làm bầu bạn nhưng không biết cái lão già này rốt cuộc có ý đồ gì.
+
+# sample_00482.wav  7.79s  ctc=0.94  daydu=1.01
+khi mà cho tam gia ta xem cái quần miêu đồ này chứ trong bụng đang hồ nghi hắn chợt nghe cái lão già phía sau.
+
+# sample_00483.wav  7.91s  ctc=0.95  daydu=1.00
+hạ giọng nói nghĩ cách đếm đủ số mèo trong tranh nếu sai một con thì cả đời của nhà ngươi sẽ phải ở lại.
+
+# sample_00484.wav  7.24s  ctc=0.91  daydu=1.00
+trong cái mộ Kim Quang này như ta đừng có mong mà nhìn thấy mặt trời nữa đó Trương Tiểu Biện nghe lời này của lão.
+
+# sample_00485.wav  6.78s  ctc=0.92  daydu=0.97
+thì thất sắc trước này hắn vốn biết cái chuyện ở chốn U Minh không phải trò đùa hủ chi.
+
+# sample_00486.wav  7.21s  ctc=0.88  daydu=1.03
+vừa rồi trong mộ có ma quỷ dở trò đích thân hắn đã nhìn thấy tận mắt rồi chuyện đã tới nước này.
+
+# sample_00487.wav  6.57s  ctc=0.92  daydu=1.00
+hắn không có muốn tin cũng phải tin chẳng lẽ lão già này cũng đang bị oan hồn trong mộ nhốt lại.
+
+# sample_00488.wav  7.71s  ctc=0.97  daydu=1.00
+mà chẳng có thể thoát thân hay sao chứ lão già vẫn trơ ra như là tượng gỗ không chút sức sống trên gương mặt.
+
+# sample_00489.wav  1.59s  ctc=0.85  daydu=1.00
+lộ ra cặp mắt vô thần.
+
+# sample_00490.wav  6.94s  ctc=0.89  daydu=1.02
+Thấy Trương Tiểu Biện sợ cho đến ngay người, đành phải cất tiếng nói chuyện, kể cho hắn nghe đầu đuôi câu chuyện.
+
+# sample_00491.wav  4.20s  ctc=0.94  daydu=0.98
+Bà Quý Phi ở trong mộ Kim Quang này lúc sinh thời nghiện mèo.
+
+# sample_00492.wav  3.92s  ctc=0.99  daydu=0.09
+thường là nuôi tới hơn một trăm con mèo đen, lại làm cho chúng.
+
+# sample_00493.wav  4.12s  ctc=0.97  daydu=1.00
+rất nhiều thứ đồ chơi tỷ như những chiếc giỏ tinh xảo.
+
+# sample_00494.wav  7.71s  ctc=0.85  daydu=0.96
+Cậy được hoàng đế sủng ái, bà Phi đã nghiễm nhiên, biến nơi cung cấm đại nội thâm nghiêm thành cái giường mèo, nhà mèo.
+
+# sample_00495.wav  7.13s  ctc=0.91  daydu=1.04
+Có điều những con mèo, mèo mà Quý Phi nuôi đều là loại quý hiếm, tinh quái lạ thường, khiến cho Thái Hậu kinh sợ.
+
+# sample_00496.wav  3.74s  ctc=0.94  daydu=1.00
+liên lụy đến bà Phi nọ, đã phải chịu thắt cổ đến chết.
+
+# sample_00497.wav  5.49s  ctc=0.86  daydu=1.00
+Quý Phi ngậm hờn mà chết táng vào cái mộ kim quang Thái hậu ác độc.
+
+# sample_00498.wav  4.00s  ctc=0.93  daydu=1.00
+lại thắt cổ hơn một trăm con mèo quý Phi nuôi. Bất luận.
+
+# sample_00499.wav  7.87s  ctc=0.82  daydu=1.05
+hay dở đều được bị thắt cổ rồi đem chôn vào trong cái giếng vàng trong mộ thất. Dòng suối mát trong cái giếng vàng ấy.
+
+# sample_00500.wav  5.62s  ctc=0.91  daydu=1.00
+là do oán khí của lũ mèo chết. Tiếc ra, kẻ nào mà uống phải, ắt sẽ gặp ma quỷ.
+
+# sample_00501.wav  2.78s  ctc=0.95  daydu=1.00
+Vừa rồi, coi như là Trương Tiểu Biện cao số.
+
+# sample_00502.wav  6.29s  ctc=0.92  daydu=0.98
+làm cho ngất đi giây lát bằng không giờ đã sớm chầu địa phủ rồi Trương Tiểu Biện.
+
+# sample_00503.wav  7.99s  ctc=0.93  daydu=0.98
+nghe đến đây suýt rơi nước mắt, nghẹn ngào nói với lão già. Sao mà cái khổ Trương Tam tôi lại khổ thế hả trời?
+
+# sample_00504.wav  7.52s  ctc=0.85  daydu=0.98
+Đã bị con chó dữ kia đuổi lăn xuống đây, lại chưa có từng làm tổn thương mãi mai đến xác phượng của quý phi nương nương.
+
+# sample_00505.wav  2.49s  ctc=0.87  daydu=1.00
+Chả hiểu ma xui quỷ khiến thế nào.
+
+# sample_00506.wav  3.27s  ctc=0.92  daydu=1.00
+Uống phải mấy cái ngụm nước mà rước họa đến nông nỗi này.
+
+# sample_00507.wav  2.86s  ctc=0.87  daydu=0.97
+Lão Tiền Bối chắc là cùng cảnh ngộ chứ.
+
+# sample_00508.wav  6.31s  ctc=0.81  daydu=1.00
+Đến cả lão tiền bối cũng chưa có từng đếm rõ cái số mèo trên tường. Tiểu nhân trẻ người non dạ.
+
+# sample_00509.wav  1.97s  ctc=0.81  daydu=1.00
+chỉ e, vô vọng mất rồi.
+
+# sample_00510.wav  3.11s  ctc=0.97  daydu=1.00
+Dám hỏi lão tiền bối quý tính đại danh là gì?
+
+# sample_00511.wav  1.82s  ctc=0.84  daydu=1.00
+Quê quán ở đâu chứ?
+
+# sample_00512.wav  3.78s  ctc=0.91  daydu=1.00
+Sao mà lại có thể hiểu rõ tường tận nguồn cơn trong mộ như thế?
+
+# sample_00513.wav  7.82s  ctc=0.85  daydu=1.05
+Hắn tỏ vẻ thân thiết, hy vọng là lão già, đồng cảnh ngộ sẽ chiếu cố, nếu mà hắn phải ở lại trong mộ suốt đời.
+
+# sample_00514.wav  7.69s  ctc=0.94  daydu=0.95
+nhưng mà dẫu sao trong lòng vẫn còn một chút nghi ngờ nói xong không khỏi đưa mắt liếc nhìn dò ý tứ của đối phương.
+
+# sample_00515.wav  6.86s  ctc=0.85  daydu=1.03
+lão phu kia dường như đã hơi mất kiên nhẫn lạnh lùng nói lão phu vân du tứ hải.
+
+# sample_00516.wav  2.95s  ctc=0.94  daydu=1.03
+đâu cũng là nhà sống đến chừng này tuổi rồi.
+
+# sample_00517.wav  7.45s  ctc=0.91  daydu=0.98
+cả cái tên của mình cũng không nhớ tới nữa ngày nay những kẻ biết lão phu đều gọi là lâm trung lão quỷ.
+
+# sample_00518.wav  6.79s  ctc=0.93  daydu=0.97
+ta đã đợi trong mộ Kim Quang này nhiều năm rồi đêm ngày giữ lăng mộ cho quý phi chỉ đợi.
+
+# sample_00519.wav  6.33s  ctc=0.93  daydu=1.00
+người số cao phúc dày có thể đếm rõ cái số mèo trong bách miêu mê hồn đồ nói đến đây.
+
+# sample_00520.wav  7.19s  ctc=0.92  daydu=0.99
+lão mới có tiếng cười khang rào rào như xe gỗ sừng sộ nhìn Trương Tiểu Biện biết đâu.
+
+# sample_00521.wav  5.29s  ctc=0.90  daydu=0.98
+người đó chính là trương tam nhà ngươi đó Trương tiểu biện sững sờ mắt.
+
+# sample_00522.wav  7.34s  ctc=0.90  daydu=1.00
+trong cái ngọn đèn chiêu hồn trong mộ nhòa đi quỷ khí mờ mịt càng nhìn càng thấy cái lão già che mặt nọ.
+
+# sample_00523.wav  7.70s  ctc=0.94  daydu=1.01
+không phải là người sống huống hồ chính lão cũng tự xưng là Lâm Trung Lão Quỷ cái gì đó có điều đổi thành.
+
+# sample_00524.wav  7.16s  ctc=0.92  daydu=1.00
+mộ trung quỷ lão quỷ thì có dễ hợp hơn lão này không phải là kẻ trộm mộ càng không giống như mình.
+
+# sample_00525.wav  7.97s  ctc=0.95  daydu=0.99
+đâm đầu vào chốn thị phi mà lạc tới cái chỗ này nghe ý trong lời của lão có lẽ đã đợi trong mộ rất nhiều năm rồi.
+
+# sample_00526.wav  6.71s  ctc=0.95  daydu=1.00
+có trời mới biết Rốt cuộc lão đã có âm mưu gì Nghĩ sâu hơn một chút nữa Không khỏi.
+
+# sample_00527.wav  7.47s  ctc=0.83  daydu=1.00
+khiến cho người ta sởn tóc gáy nghĩ đến đây Trương Tiểu Biện nảy ra ý định bỏ trốn Liền nói phụ họa.
+
+# sample_00528.wav  4.47s  ctc=0.93  daydu=1.00
+Thì ra lão tiên sinh Đang đợi người sao Tiểu nhân có một chút việc gấp.
+
+# sample_00529.wav  7.42s  ctc=0.95  daydu=0.99
+Trong nhà còn có mẹ già tám mươi tuổi Đang chờ bốc thuốc mang về Xin thứ cho tiểu nhân Không có hầu chuyện được nữa.
+
+# sample_00530.wav  7.42s  ctc=0.80  daydu=1.00
+Nói xong hắn mới vội xoay người ba chân bốn cẳng định bỏ trốn bỗng thấy vạt áo sau lưng bỗng bỗng thích lại.
+
+# sample_00531.wav  8.00s  ctc=0.88  daydu=1.02
+người đã bị lão già tự xưng là lâm trung lão quỷ nắm chặt quật thẳng vào vách mộ trước mặt như ném một con gà con.
+
+# sample_00532.wav  6.74s  ctc=0.97  daydu=1.00
+trước khi trời sáng nếu mà không đếm được cho ta đừng có trách lão phu vô tình đó trương tiểu biện.
+
+# sample_00533.wav  7.88s  ctc=0.95  daydu=1.00
+đau cho đến thấu xương bây giờ gọi trời trời không thấu gọi đất đất không hay đành mặc cho người ta sai khiến.
+
+# sample_00534.wav  7.64s  ctc=0.92  daydu=0.99
+bị bắt đi đếm Bách Miêu Mê Hồn lúc này hắn mới chỉ nhìn lướt qua cái bức tranh như là cưỡi ngựa xem hoa.
+
+# sample_00535.wav  7.30s  ctc=0.90  daydu=1.00
+tới giờ trấn tĩnh nhìn kỹ chỉ thấy cái bọn mèo trên vách mộ phân bố nhất quán dường như là bên trong.
+
+# sample_00536.wav  5.62s  ctc=0.97  daydu=1.00
+còn có ẩn ý gì đó trước đây những con mèo mà Trương Tiểu Biện thấy đa phần.
+
+# sample_00537.wav  7.36s  ctc=0.93  daydu=0.97
+đều xấu xí chẳng có ai thèm nhìn thời nuôi mèo làm cảnh là cái thú tiêu khiển khi trà dư tửu hậu.
+
+# sample_00538.wav  2.79s  ctc=0.96  daydu=1.00
+của các vương công quý tộc ở trong kinh thành.
+
+# sample_00539.wav  4.46s  ctc=0.93  daydu=1.02
+Một con sư tử miêu hoặc là mèo ba tư trắng tuyền là hàng giai phẩm.
+
+# sample_00540.wav  1.86s  ctc=0.99  daydu=1.00
+Giá bán trong kinh thành rất cao.
+
+# sample_00541.wav  6.83s  ctc=0.90  daydu=1.01
+Còn trong làng ngoài xóm ở chỗ châu phủ tầm thường đa phần là những con mèo giặc mèo hoang lem luốc.
+
+# sample_00542.wav  5.90s  ctc=0.96  daydu=0.98
+Dẫu là thi thoảng có mèo nhà nuôi thì cũng chỉ là loại mèo mướp chẳng có phẩm cấp gì.
+
+# sample_00543.wav  7.62s  ctc=0.94  daydu=1.01
+Trở lại bức tranh Bách Miêu Đồ trong mộ Kim Quang Nửa phía trên đều là con mèo có phẩm chất cao Mắt.
+
+# sample_00544.wav  7.09s  ctc=0.95  daydu=1.00
+tròn, răng sắc, thân hình mập mạp, thần thái an nhàn Những con đen tuyền thì như mây đen phủ tuyết.
+
+# sample_00545.wav  7.26s  ctc=0.85  daydu=1.10
+Những con trắng tinh thì như bình ngọc ngân câu Những con có vằn hổ thì chẳng khác nào một quả tú cầu.
+
+# sample_00546.wav  7.67s  ctc=0.97  daydu=0.91
+Ở giữa bức tranh thì phẩm cấp mèo hơi kém hơn Càng gần chân tường thì phẩm cấp càng thấp Dưới cùng.
+
+# sample_00547.wav  6.52s  ctc=0.94  daydu=1.00
+là bốn con mèo gầy gò giống hệt nhau Chỉ có mỗi đôi mắt là sáng lóa, không mất đi thần thái.
+
+# sample_00548.wav  2.42s  ctc=0.97  daydu=1.00
+Chúng dường như cùng một bọc sinh ra.
+
+# sample_00549.wav  7.08s  ctc=0.93  daydu=1.00
+Trương Tiểu Biện nhớ ngày trước ở làng Kim Quang, cũng có một con mèo hoang sinh tư Mấy ông già hiểu biết về mèo.
+
+# sample_00550.wav  3.73s  ctc=0.96  daydu=0.97
+ở trong làng bảo rằng, mèo sinh càng ít càng quý.
+
+# sample_00551.wav  4.21s  ctc=0.97  daydu=0.97
+Một con thì quý, hai con thì đần, ba con thì kém.
+
+# sample_00552.wav  3.29s  ctc=0.94  daydu=1.00
+Nếu sinh tư thì gọi là đài kiệu tử.
+
+# sample_00553.wav  5.64s  ctc=0.95  daydu=1.00
+Phu Khiên Kiệu Chẳng có giá trị gì mà còn hay chết non Trương Tiểu Biện.
+
+# sample_00554.wav  6.35s  ctc=0.89  daydu=1.01
+Xem tới đây, trong lòng mới nghĩ ngợi. Hẳn là cái thằng cha hoàng đế, thương phi tử xinh đẹp chết thảm.
+
+# sample_00555.wav  7.25s  ctc=0.89  daydu=1.01
+Cho nên, tìm tay thợ khéo vẽ cái đám mèo mà tiểu nương tử vẫn nuôi lên vách mộ để làm bầu bạn.
+
+# sample_00556.wav  2.96s  ctc=0.91  daydu=1.00
+Cứ như trong tranh, quý phi tiểu nương tử.
+
+# sample_00557.wav  7.87s  ctc=0.89  daydu=1.03
+Lúc sinh thời, hễ có mèo là nuôi tất, chẳng kể hay dở. Bây giờ, cái mạng nhỏ của Trương Tam Gia ta sắp…
+
+# sample_00558.wav  7.58s  ctc=0.89  daydu=0.99
+chẳng bằng bốn con mèo con khiêng kiệu kia rồi. Chỉ cần sơ ý có một chút, đã bị lão quỷ tử kia khử ngay.
+
+# sample_00559.wav  5.78s  ctc=0.93  daydu=0.97
+Các vị mèo tổ tiên ở trên trời nếu có linh thiêng, nhớ phù hộ cho tam gia không có đếm sót.
+
+# sample_00560.wav  7.67s  ctc=0.97  daydu=1.00
+Nếu giữ được cái mạng, sau này ta sẽ bỏ tiền mời thầy chùa thầy cúng tới để lập đạo tràng cầu siêu cho các vị.
+
+# sample_00561.wav  6.79s  ctc=0.91  daydu=0.95
+sớm siêu thoát. Hắn vừa lẩm nhẩm, vừa cầu khẩn, vừa đếm kỹ cái số mèo trên bức bích họa.
+
+# sample_00562.wav  2.11s  ctc=0.63  daydu=1.10
+Đếm đi đếm lại sáu bảy lần.
+
+# sample_00563.wav  6.77s  ctc=0.92  daydu=1.00
+Càng đếm mắt càng hoa, đầu càng loạn dường như là cái bọn mèo trong bách miêu đồ đều đang sống dậy.
+
+# sample_00564.wav  4.16s  ctc=0.90  daydu=1.00
+trông thì tưởng đứng im bặt thật ra đang trốn đông trốn tây.
+
+# sample_00565.wav  6.74s  ctc=0.91  daydu=1.04
+Hai con mắt hơi mất tập trung một chút là bức tranh lập tức đã biến đổi khác hẳn cứ mỗi lần đếm lại.
+
+# sample_00566.wav  1.54s  ctc=0.99  daydu=1.00
+ra một kết quả khác nhau.
+
+# sample_00567.wav  5.72s  ctc=0.96  daydu=0.94
+Đếm đi đếm lại chỉ biết được đại khái trong bức tranh có khoảng một trăm mười mấy con mèo.
+
+# sample_00568.wav  4.16s  ctc=0.92  daydu=0.98
+Nhưng mà rốt cuộc có bao nhiêu con thì không có tài nào đếm ra được.
+
+# sample_00569.wav  2.35s  ctc=0.86  daydu=1.03
+Trương Tiểu Biện càng thêm hoảng loạn.
+
+# sample_00570.wav  2.48s  ctc=0.89  daydu=1.00
+Đã đờ đẫn rồi mà vẫn muốn đếm tiếp.
+
+# sample_00571.wav  7.44s  ctc=0.84  daydu=1.01
+Bỗng phía sau có âm thanh khác lạ, vội vàng quay đầu lại nhìn, chỉ thấy cái xác vẫn chưa có quá đi của quý phi.
+
+# sample_00572.wav  4.17s  ctc=0.93  daydu=1.00
+không động đậy. Nhưng móng tay đột ngột chìa hẳn ra.
+
+# sample_00573.wav  3.64s  ctc=0.94  daydu=1.00
+Những đốt tay cương cướng phát ra những cái tiếng răng rắc.
+
+# sample_00574.wav  2.03s  ctc=0.93  daydu=1.00
+Lão già từ đầu đến cuối.
+
+# sample_00575.wav  13.83s  ctc=0.93  daydu=0.98
+Chăm chú theo dõi Trương Tiểu Biện, cũng nghe thấy cái tiếng động, lạnh lùng liếc sang xác phượng lẩm bẩm. Hai cái thằng trộm ngu xuẩn, đã biết đào mộ mà không biết vật ngậm ở trong mồm cương thi không có được lấy ra sao chứ.
+
+# sample_00576.wav  3.65s  ctc=0.93  daydu=1.00
+đã dám cạy lấy ngọc lại còn định giở trò đồi bại.
+
+# sample_00577.wav  7.77s  ctc=0.88  daydu=0.97
+Đúng là chán sống. Rồi lão giơ tay, nắm chặt vai của Trương tiểu biện, gặng hỏi. Hôm nay ngày xấu.
+
+# sample_00578.wav  4.97s  ctc=0.95  daydu=1.00
+không có được làm kinh động chủ nhân nữa nói mau trên vách có bao nhiêu con mèo đó.
+
+# sample_00579.wav  3.10s  ctc=0.90  daydu=1.00
+Có câu rằng một lời có thể gây nên quạ.
+
+# sample_00580.wav  2.61s  ctc=0.96  daydu=1.00
+Chưa nghĩ cho sâu, chớ có nói càn.
+
+# sample_00581.wav  2.29s  ctc=0.93  daydu=1.00
+Sống chết trong đường tơ kẽ tóc.
+
+# sample_00582.wav  1.78s  ctc=0.94  daydu=1.00
+Ai dám bạo mồm nói bậy đây?
+
+# sample_00583.wav  5.14s  ctc=0.94  daydu=0.98
+Các bạn vừa nghe xong tập một, Tặc Miêu của tác giả thiên hạ bá sướng.
+
+# sample_00584.wav  2.14s  ctc=0.97  daydu=1.00
+Cảm ơn các bạn đã quan tâm theo dõi.
+
+# sample_00585.wav  2.58s  ctc=0.99  daydu=1.00
+Hẹn gặp lại các bạn trong phần tiếp theo.
+
+# sample_00586.wav  1.72s  ctc=0.94  daydu=1.00
+Thân ái chào tạm biệt.

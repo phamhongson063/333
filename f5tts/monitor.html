@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>May Monitor</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --panel: #161b22;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --track: #2a2f3a;
+    --ok: #3fb950;
+    --warn: #d29922;
+    --danger: #f85149;
+    --accent: #58a6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px 60px;
+  }
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 0 0 28px;
+    letter-spacing: 0.02em;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    max-width: 1100px;
+  }
+  .card {
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 20px 24px 26px;
+    width: 240px;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 8px 24px rgba(0,0,0,0.35);
+  }
+  .card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 4px 0 8px;
+    font-weight: 600;
+  }
+  .gauge-value {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: -6px;
+  }
+  .gauge-sub {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+    min-height: 16px;
+  }
+  .needle {
+    transform-origin: 100px 100px;
+    transition: transform 0.6s cubic-bezier(.4,1.4,.4,1);
+  }
+  .status-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 8px currentColor;
+  }
+  .dot.running { background: var(--ok); color: var(--ok); }
+  .dot.paused { background: var(--warn); color: var(--warn); }
+  .dot.stopped { background: var(--muted); color: var(--muted); }
+  .status-line {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0 4px;
+  }
+  .footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .pulse {
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  .tts-card {
+    background: var(--panel);
+    border-radius: 16px;
+    padding: 24px 28px 28px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 36px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 8px 24px rgba(0,0,0,0.35);
+  }
+  .tts-card h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+  #tts-text {
+    width: 100%;
+    min-height: 110px;
+    resize: vertical;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--track);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  #tts-text:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .tts-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+  }
+  #tts-ckpt {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--track);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  #tts-btn {
+    background: var(--accent);
+    color: #0e1117;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  #tts-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  #tts-status {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  #tts-audio {
+    width: 100%;
+    margin-top: 16px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <h1>Tinh trang may — cap nhat moi 2 giay</h1>
+  <div class="grid">
+    <div class="card">
+      <h2>CPU</h2>
+      <svg viewBox="0 0 200 120" width="200" height="120">
+        <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--track)" stroke-width="14" stroke-linecap="round"/>
+        <path id="arc-cpu" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--accent)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+        <g class="needle" id="needle-cpu">
+          <line x1="100" y1="100" x2="100" y2="30" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="6" fill="var(--text)"/>
+        </g>
+      </svg>
+      <div class="gauge-value" id="val-cpu">--%</div>
+      <div class="gauge-sub" id="sub-cpu">&nbsp;</div>
+    </div>
+
+    <div class="card">
+      <h2>RAM</h2>
+      <svg viewBox="0 0 200 120" width="200" height="120">
+        <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--track)" stroke-width="14" stroke-linecap="round"/>
+        <path id="arc-ram" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--ok)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+        <g class="needle" id="needle-ram">
+          <line x1="100" y1="100" x2="100" y2="30" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="6" fill="var(--text)"/>
+        </g>
+      </svg>
+      <div class="gauge-value" id="val-ram">--%</div>
+      <div class="gauge-sub" id="sub-ram">&nbsp;</div>
+    </div>
+
+    <div class="card">
+      <h2>Dung luong dia (/)</h2>
+      <svg viewBox="0 0 200 120" width="200" height="120">
+        <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--track)" stroke-width="14" stroke-linecap="round"/>
+        <path id="arc-disk" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="var(--warn)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251.2" stroke-dashoffset="251.2"/>
+        <g class="needle" id="needle-disk">
+          <line x1="100" y1="100" x2="100" y2="30" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="100" cy="100" r="6" fill="var(--text)"/>
+        </g>
+      </svg>
+      <div class="gauge-value" id="val-disk">--%</div>
+      <div class="gauge-sub">&nbsp;</div>
+    </div>
+
+    <div class="card status-card">
+      <h2>Tien trinh train</h2>
+      <div style="font-size:40px; margin-top:6px;" id="training-icon">&#9210;</div>
+      <div class="status-line"><span class="dot stopped" id="training-dot"></span><span id="training-text">Dang kiem tra...</span></div>
+      <div class="gauge-sub" id="training-sub">&nbsp;</div>
+    </div>
+  </div>
+  <div class="tts-card">
+    <h2>Tao audio tu text</h2>
+    <textarea id="tts-text" placeholder="Nhap van ban muon chuyen thanh giong doc..."></textarea>
+    <div class="tts-row">
+      <select id="tts-ckpt"></select>
+      <button id="tts-btn" onclick="generateAudio()">Tao mp3</button>
+      <span class="tts-status" id="tts-status">&nbsp;</span>
+    </div>
+    <audio id="tts-audio" controls></audio>
+  </div>
+  <div class="footer" id="load-avg">load avg: -- -- --</div>
+
+<script>
+const CIRC = 251.2; // do dai cung 180 do voi ban kinh 80
+
+function setGauge(prefix, percent, color) {
+  const clamped = Math.max(0, Math.min(100, percent));
+  const arc = document.getElementById('arc-' + prefix);
+  const needle = document.getElementById('needle-' + prefix);
+  const offset = CIRC - (clamped / 100) * CIRC;
+  arc.style.strokeDashoffset = offset;
+  const angle = -90 + (clamped / 100) * 180;
+  needle.style.transform = `rotate(${angle}deg)`;
+  if (color) arc.style.stroke = color;
+}
+
+function levelColor(percent) {
+  if (percent < 60) return 'var(--ok)';
+  if (percent < 85) return 'var(--warn)';
+  return 'var(--danger)';
+}
+
+async function tick() {
+  try {
+    const res = await fetch('/stats', { cache: 'no-store' });
+    const data = await res.json();
+
+    setGauge('cpu', data.cpu_percent, levelColor(data.cpu_percent));
+    document.getElementById('val-cpu').textContent = data.cpu_percent.toFixed(1) + '%';
+
+    setGauge('ram', data.mem.percent, levelColor(data.mem.percent));
+    document.getElementById('val-ram').textContent = data.mem.percent.toFixed(1) + '%';
+    document.getElementById('sub-ram').textContent = `${data.mem.used_gb} / ${data.mem.total_gb} GB`;
+
+    setGauge('disk', data.disk_percent, levelColor(data.disk_percent));
+    document.getElementById('val-disk').textContent = data.disk_percent.toFixed(1) + '%';
+
+    const dot = document.getElementById('training-dot');
+    const text = document.getElementById('training-text');
+    const sub = document.getElementById('training-sub');
+    const icon = document.getElementById('training-icon');
+    const t = data.training;
+    if (!t.running) {
+      dot.className = 'dot stopped';
+      text.textContent = 'Khong chay';
+      sub.textContent = ' ';
+      icon.classList.remove('pulse');
+      icon.textContent = '⏹';
+    } else if (t.paused) {
+      dot.className = 'dot paused';
+      text.textContent = 'Dang nghi (paused)';
+      sub.textContent = 'CPU: ' + t.cpu_percent.toFixed(1) + '%';
+      icon.classList.remove('pulse');
+      icon.textContent = '⏸';
+    } else {
+      dot.className = 'dot running';
+      text.textContent = 'Dang train';
+      sub.textContent = 'CPU: ' + t.cpu_percent.toFixed(1) + '%';
+      icon.classList.add('pulse');
+      icon.textContent = '▶';
+    }
+
+    document.getElementById('load-avg').textContent =
+      'load avg: ' + data.load_avg.join('  ');
+  } catch (e) {
+    document.getElementById('training-text').textContent = 'Mat ket noi toi server';
+  }
+}
+
+tick();
+setInterval(tick, 2000);
+
+async function loadCheckpoints() {
+  const select = document.getElementById('tts-ckpt');
+  const previous = select.value;
+  try {
+    const res = await fetch('/checkpoints', { cache: 'no-store' });
+    const data = await res.json();
+    select.innerHTML = '';
+    for (const c of data.checkpoints) {
+      const opt = document.createElement('option');
+      opt.value = c.value;
+      opt.textContent = c.label;
+      select.appendChild(opt);
+    }
+    if (previous && [...select.options].some(o => o.value === previous)) {
+      select.value = previous;
+    }
+  } catch (e) {
+    // im lang, giu nguyen danh sach cu neu loi
+  }
+}
+
+loadCheckpoints();
+setInterval(loadCheckpoints, 10000);
+
+async function generateAudio() {
+  const btn = document.getElementById('tts-btn');
+  const status = document.getElementById('tts-status');
+  const audio = document.getElementById('tts-audio');
+  const text = document.getElementById('tts-text').value.trim();
+  const checkpoint = document.getElementById('tts-ckpt').value;
+
+  if (!text) {
+    status.textContent = 'Nhap text truoc da.';
+    return;
+  }
+
+  btn.disabled = true;
+  audio.style.display = 'none';
+  status.textContent = 'Dang tao audio, co the mat vai phut...';
+
+  try {
+    const res = await fetch('/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, checkpoint }),
+    });
+    const data = await res.json();
+    if (data.ok) {
+      status.textContent = 'Xong: ' + data.file;
+      audio.src = '/generated/' + data.file + '?t=' + Date.now();
+      audio.style.display = 'block';
+      audio.play();
+    } else {
+      status.textContent = 'Loi: ' + data.error;
+    }
+  } catch (e) {
+    status.textContent = 'Loi ket noi: ' + e;
+  } finally {
+    btn.disabled = false;
+  }
+}
+</script>
+</body>
+</html>

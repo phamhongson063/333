@@ -1,0 +1,65 @@
+{
+  "project": "vi_story",
+  "speaker": "narrator",
+  "language": "VI",
+  "sources": [
+    {
+      "id": "sample",
+      "path": "/Users/son.ph/Documents/Document/333/original/sample.mp3",
+      "codec": "aac",
+      "bit_rate": 129473,
+      "duration": 3446.770068,
+      "decoded_duration": 3446.77,
+      "clips": 577,
+      "seconds": 3144.07
+    }
+  ],
+  "clips": 577,
+  "total_seconds": 3144.07,
+  "total_hours": 0.873,
+  "mean_duration": 5.449,
+  "duration_percentiles": {
+    "min": 1.52,
+    "p10": 2.35,
+    "median": 6.145,
+    "p90": 7.7,
+    "max": 11.68
+  },
+  "chars_percentiles": {
+    "min": 19.0,
+    "p10": 36.0,
+    "median": 84.0,
+    "p90": 112.0,
+    "max": 168.0
+  },
+  "train": 566,
+  "val": 11,
+  "qc": {
+    "total": 587,
+    "accepted": 577,
+    "rejected": 10,
+    "reasons": {
+      "duration_too_short": 5,
+      "duration_too_long": 4,
+      "low_asr_confidence": 1
+    }
+  },
+  "timings_seconds": {
+    "sample.decode": 7.58,
+    "sample.vad_raw": 15.25,
+    "sample.denoise": 34.76,
+    "sample.vad_clean": 13.56,
+    "sample.asr": 590.28,
+    "sample.align": 67.89,
+    "sample.segment": 0.22,
+    "sample.cut": 5.73,
+    "sample.text": 241.6,
+    "sample.qc": 0.01
+  },
+  "config": {
+    "sample_rate": 44100,
+    "denoise_backend": "noisereduce",
+    "asr_backend": "mlx",
+    "asr_refine": false
+  }
+}

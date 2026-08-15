@@ -1,0 +1,124 @@
+project:
+  name: vi_story
+  speaker: narrator
+  language: VI
+  work_dir: work
+  out_dir: dataset
+  seed: 1234
+
+input:
+  dir: original
+  pattern:
+    - "*.mp3"
+    - "*.m4a"
+    - "*.wav"
+    - "*.flac"
+  paths: []
+  preview_minutes: 0
+
+audio:
+  sample_rate: 44100
+  vad_sample_rate: 16000
+  highpass_hz: 60
+  lufs_target: -23.0
+  peak_ceiling_db: -1.5
+  per_clip_loudnorm: false
+
+denoise:
+  backend: noisereduce
+  strength: 0.6
+  block_seconds: 60
+  overlap_seconds: 1.0
+  noise_profile_max_seconds: 30
+  ffmpeg_afftdn_nf: -25
+  demucs_model: htdemucs
+
+vad:
+  use_onnx: true
+  threshold: 0.5
+  min_speech_ms: 250
+  min_silence_ms: 300
+  speech_pad_ms: 60
+
+asr:
+  backend: mlx
+  mlx_model: mlx-community/whisper-large-v3-mlx
+  faster_whisper_model: large-v3
+  faster_whisper_compute: int8
+  language: vi
+  beam_size: 5
+  condition_on_previous_text: false
+  initial_prompt: ""
+  refine:
+    enabled: false
+    model: vinai/PhoWhisper-large
+    device: auto
+    batch_size: 4
+
+align:
+  enabled: true
+  model: nguyenvulebinh/wav2vec2-base-vietnamese-250h
+  device: auto
+  chunk_seconds: 20.0
+  chunk_margin: 2.5
+  min_boundary_silence: 0.4
+
+rescore:
+  enabled: true
+  threshold: 0.8
+  min_completeness: 0.90
+  min_gain: 0.05
+  score_tolerance: 0.05
+  completeness_gain: 0.05
+
+segment:
+  min_duration: 1.5
+  max_duration: 12.0
+  target_duration: 8.0
+  min_cut_silence: 0.10
+  silence_offset_db: 25.0
+  silence_hop_ms: 10.0
+  max_word_silence_overlap: 0.8
+  max_word_rate_factor: 2.0
+  pad_ms: 80
+  trim_db: 40.0
+
+text:
+  le_word: "lẻ"
+  thousand_word: "nghìn"
+  four_after_ten: "tư"
+  decimal_by_digit: true
+  spell_unknown_acronyms: true
+  lowercase: false
+  keep_punctuation: ",.!?…"
+  abbreviations: {}
+  units: {}
+  currency: {}
+  letters: {}
+
+qc:
+  min_duration: 1.5
+  max_duration: 12.0
+  min_chars: 4
+  min_chars_per_sec: 4.0
+  max_chars_per_sec: 28.0
+  max_clip_ratio: 0.005
+  min_snr_db: 10.0
+  min_asr_prob: 0.55
+  min_word_prob: null
+  min_ctc_score: 0.6
+  min_completeness: 0.80
+  max_no_speech_prob: 0.5
+  ctc_overrides_no_speech: 0.75
+  drop_duplicate_text: true
+
+edits:
+  enabled: true
+  file: edit.txt
+  duration_tolerance: 0.05
+
+export:
+  val_ratio: 0.02
+  val_max: 100
+  emit_wavs_dir: true
+  emit_ljspeech_csv: true

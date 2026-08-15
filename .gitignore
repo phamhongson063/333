@@ -1,0 +1,64 @@
+# --- macOS / editor ---
+.DS_Store
+._*
+.vscode/
+.idea/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Model checkpoints / weights (nặng) ---
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.gguf
+*.h5
+*.pkl
+*.npz
+*.tflite
+ckpts/
+checkpoints/
+pretrained/
+*.arrow
+*.duckdb
+
+# Cache của HuggingFace / torch
+.cache/
+hf_cache/
+huggingface/
+torch_home/
+
+# --- Audio / media (nặng) ---
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.opus
+
+# --- Thư mục dữ liệu lớn của dự án ---
+original/
+dataset/Data/
+f5tts/generated/
+f5tts/F5-TTS-Vietnamese/
+pipeline/__pycache__/
+
+# --- Logs / kết quả tạm ---
+*.log
+logs/
+runs/
+wandb/
+tensorboard/
+outputs/
+tmp/
