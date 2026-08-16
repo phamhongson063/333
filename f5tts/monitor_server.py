@@ -4,22 +4,38 @@ import json
 import os
 import re
 import subprocess
+import threading
 import time
-import wave
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+from tts_text import SENTENCE_GAP, SPEED, join_wavs, max_chunk_bytes, prepare_text, split_text
 
 PORT = 8787
 BASE_DIR = os.path.dirname(__file__)
 HTML_PATH = os.path.join(BASE_DIR, "monitor.html")
 REPO_DIR = os.path.join(BASE_DIR, "F5-TTS-Vietnamese")
 VENV_PY = os.path.join(BASE_DIR, ".venv", "bin", "f5-tts_infer-cli")
+VENV_PYTHON = os.path.join(BASE_DIR, ".venv", "bin", "python")
+WORKER = os.path.join(BASE_DIR, "tts_worker.py")
 CKPT_DIR = os.path.join(REPO_DIR, "ckpts", "your_training_dataset")
 VOCAB_FILE = os.path.join(REPO_DIR, "data", "your_training_dataset", "vocab.txt")
 REF_AUDIO = os.path.join(REPO_DIR, "data", "your_training_dataset", "wavs", "sample_00004.wav")
 REF_TEXT = "tình cờ lạc bước vào một ngôi mộ hoang của quý phi đời trước."
 OUTPUT_DIR = os.path.join(BASE_DIR, "generated")
-SENTENCE_GAP = 0.35
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+JOBS: dict[str, dict] = {}
+JOBS_LOCK = threading.Lock()
+
+
+def job_update(job_id: str, **fields) -> None:
+    with JOBS_LOCK:
+        JOBS.setdefault(job_id, {}).update(fields)
+
+
+def job_read(job_id: str) -> dict:
+    with JOBS_LOCK:
+        return dict(JOBS.get(job_id) or {})
 
 
 def sh(cmd: list[str]) -> str:
@@ -101,86 +117,60 @@ def resolve_checkpoint(name: str) -> str:
     return os.path.join(CKPT_DIR, "pretrained_vn1000h.pt")
 
 
-def max_chunk_bytes() -> int:
-    with wave.open(REF_AUDIO) as ref:
-        seconds = ref.getnframes() / ref.getframerate()
-    if seconds >= 22:
-        return len(REF_TEXT.encode("utf-8"))
-    return max(1, int(len(REF_TEXT.encode("utf-8")) / seconds * (22 - seconds)))
-
-
-def pack(pieces: list[str], limit: int) -> list[str]:
-    packed: list[str] = []
-    buffer = ""
-    for piece in pieces:
-        merged = f"{buffer} {piece}".strip()
-        if buffer and len(merged.encode("utf-8")) > limit:
-            packed.append(buffer)
-            buffer = piece
-        else:
-            buffer = merged
-    if buffer:
-        packed.append(buffer)
-    return packed
-
-
-def split_text(text: str, limit: int) -> list[str]:
-    units: list[str] = []
-    for sentence in re.split(r"(?<=[.!?])\s+", text.strip()):
-        if not sentence:
-            continue
-        if len(sentence.encode("utf-8")) <= limit:
-            units.append(sentence)
-        else:
-            units.extend(pack(re.split(r"(?<=[,;:])\s+", sentence), limit))
-    return pack(units, limit) or [text]
-
-
-def join_wavs(sources: list[str], target: str, gap: float) -> None:
-    with wave.open(sources[0]) as first:
-        params = first.getparams()
-    frame_size = params.sampwidth * params.nchannels
-    silence = b"\x00" * (int(gap * params.framerate) * frame_size)
-    with wave.open(target, "wb") as out:
-        out.setparams(params)
-        for position, source in enumerate(sources):
-            if position:
-                out.writeframes(silence)
-            with wave.open(source) as part:
-                out.writeframes(part.readframes(part.getnframes()))
-
-
-def synthesize(text: str, checkpoint_name: str = "") -> tuple[bool, str]:
-    text = text.lower()
-    name = f"gen_{int(time.time() * 1000)}"
+def synthesize(text: str, checkpoint_name: str = "", name: str = "", speed: float = SPEED) -> tuple[bool, str]:
+    text = prepare_text(text)
+    name = name or f"gen_{int(time.time() * 1000)}"
     wav_path = os.path.join(OUTPUT_DIR, f"{name}.wav")
     mp3_path = os.path.join(OUTPUT_DIR, f"{name}.mp3")
     checkpoint = resolve_checkpoint(checkpoint_name)
-    parts = split_text(text, max_chunk_bytes())
+    parts = split_text(text, max_chunk_bytes(REF_AUDIO, REF_TEXT))
     part_paths: list[str] = []
+    job_update(name, total=len(parts), done=0, state="running", started=time.time())
+
+    worker = subprocess.Popen(
+        ["arch", "-arm64", VENV_PYTHON, WORKER,
+         "--ckpt_file", checkpoint,
+         "--vocab_file", VOCAB_FILE,
+         "--ref_audio", REF_AUDIO,
+         "--ref_text", REF_TEXT],
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+        text=True, cwd=REPO_DIR, bufsize=1,
+    )
+
+    def ask(payload: dict | None) -> dict:
+        if payload is not None:
+            worker.stdin.write(json.dumps(payload) + "\n")
+            worker.stdin.flush()
+        line = worker.stdout.readline()
+        if not line:
+            return {"ok": False, "error": "worker thoat bat ngo"}
+        return json.loads(line)
 
     try:
-        for position, part in enumerate(parts):
-            part_name = f"{name}_{position:03d}.wav"
-            cmd = [
-                "arch", "-arm64", VENV_PY,
-                "--model", "F5TTS_Base",
-                "--ckpt_file", checkpoint,
-                "--vocab_file", VOCAB_FILE,
-                "--ref_audio", REF_AUDIO,
-                "--ref_text", REF_TEXT,
-                "--gen_text", part,
-                "--vocoder_name", "vocos",
-                "--output_dir", OUTPUT_DIR,
-                "--output_file", part_name,
-            ]
-            proc = subprocess.run(cmd, capture_output=True, text=True, cwd=REPO_DIR, timeout=600)
-            if proc.returncode != 0:
-                return False, proc.stderr[-4000:]
-            part_paths.append(os.path.join(OUTPUT_DIR, part_name))
+        job_update(name, state="loading")
+        ready = ask(None)
+        if not ready.get("ok"):
+            return False, ready.get("error", "worker loi khi khoi dong")
 
+        job_update(name, state="running", started=time.time())
+        for position, part in enumerate(parts):
+            part_path = os.path.join(OUTPUT_DIR, f"{name}_{position:03d}.wav")
+            result = ask({"text": part, "out": part_path, "speed": speed})
+            if not result.get("ok"):
+                return False, result.get("error", "loi khong ro")
+            part_paths.append(part_path)
+            job_update(name, done=position + 1, done_at=time.time())
+
+        job_update(name, state="joining")
         join_wavs(part_paths, wav_path, SENTENCE_GAP)
     finally:
+        try:
+            worker.stdin.write(json.dumps({"stop": True}) + "\n")
+            worker.stdin.flush()
+        except (BrokenPipeError, ValueError):
+            pass
+        worker.terminate()
+        worker.wait(timeout=10)
         for path in part_paths:
             if os.path.isfile(path):
                 os.remove(path)
@@ -230,6 +220,31 @@ class Handler(BaseHTTPRequestHandler):
             self._json(200, {"checkpoints": list_checkpoints()})
             return
 
+        if self.path.startswith("/progress"):
+            query = self.path.split("?", 1)[1] if "?" in self.path else ""
+            job_id = ""
+            for pair in query.split("&"):
+                key, _, value = pair.partition("=")
+                if key == "job":
+                    job_id = value
+            job = job_read(job_id)
+            if not job:
+                self._json(404, {"ok": False, "error": "khong tim thay job"})
+                return
+            now = time.time()
+            started = job.get("started", now)
+            done = job.get("done", 0)
+            total = job.get("total", 0)
+            job["elapsed"] = round(now - started)
+            if done:
+                done_at = job.get("done_at", now)
+                rate = (done_at - started) / done
+                job["eta"] = max(0, round(rate * (total - done) - (now - done_at)))
+            else:
+                job["eta"] = None
+            self._json(200, {"ok": True, **job})
+            return
+
         if self.path in ("/", "/monitor.html"):
             with open(HTML_PATH, "rb") as f:
                 body = f.read()
@@ -269,18 +284,33 @@ class Handler(BaseHTTPRequestHandler):
             if not text:
                 self._json(400, {"ok": False, "error": "thieu text"})
                 return
+
             try:
-                ok, result = synthesize(text, checkpoint_name)
-            except subprocess.TimeoutExpired:
-                self._json(504, {"ok": False, "error": "qua thoi gian cho (10 phut)"})
-                return
-            except Exception as exc:
-                self._json(500, {"ok": False, "error": str(exc)})
-                return
-            if ok:
-                self._json(200, {"ok": True, "file": result})
-            else:
-                self._json(500, {"ok": False, "error": result})
+                speed = float(payload.get("speed") or SPEED)
+            except (TypeError, ValueError):
+                speed = SPEED
+            speed = min(1.5, max(0.5, speed))
+
+            job_id = f"gen_{int(time.time() * 1000)}"
+            parts = split_text(prepare_text(text), max_chunk_bytes(REF_AUDIO, REF_TEXT))
+            job_update(job_id, total=len(parts), done=0, state="running", started=time.time())
+
+            def worker() -> None:
+                try:
+                    ok, result = synthesize(text, checkpoint_name, job_id, speed)
+                except subprocess.TimeoutExpired:
+                    job_update(job_id, state="error", error="qua thoi gian cho (10 phut)")
+                    return
+                except Exception as exc:
+                    job_update(job_id, state="error", error=str(exc))
+                    return
+                if ok:
+                    job_update(job_id, state="done", file=result)
+                else:
+                    job_update(job_id, state="error", error=result)
+
+            threading.Thread(target=worker, daemon=True).start()
+            self._json(200, {"ok": True, "job": job_id, "total": len(parts)})
             return
 
         self.send_response(404)

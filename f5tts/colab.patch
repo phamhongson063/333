@@ -1,0 +1,61 @@
+diff --git a/src/f5_tts/model/modules.py b/src/f5_tts/model/modules.py
+index 8e5c3c2..a897aaf 100644
+--- a/src/f5_tts/model/modules.py
++++ b/src/f5_tts/model/modules.py
+@@ -258,7 +258,7 @@ class ConvNeXtV2Block(nn.Module):
+ 
+     def forward(self, x: torch.Tensor) -> torch.Tensor:
+         residual = x
+-        x = x.transpose(1, 2)  # b n d -> b d n
++        x = x.transpose(1, 2).contiguous()  # b n d -> b d n
+         x = self.dwconv(x)
+         x = x.transpose(1, 2)  # b d n -> b n d
+         x = self.norm(x)
+diff --git a/src/f5_tts/model/trainer.py b/src/f5_tts/model/trainer.py
+index d9ab4a8..2afef4c 100644
+--- a/src/f5_tts/model/trainer.py
++++ b/src/f5_tts/model/trainer.py
+@@ -148,7 +148,7 @@ class Trainer:
+         if self.is_main:
+             checkpoint = dict(
+                 model_state_dict=self.accelerator.unwrap_model(self.model).state_dict(),
+-                optimizer_state_dict=self.accelerator.unwrap_model(self.optimizer).state_dict(),
++                optimizer_state_dict=self.optimizer.state_dict(),
+                 ema_model_state_dict=self.ema_model.state_dict(),
+                 scheduler_state_dict=self.scheduler.state_dict(),
+                 update=update,
+@@ -161,7 +161,8 @@ class Trainer:
+             else:
+                 if self.keep_last_n_checkpoints == 0:
+                     return
+-                self.accelerator.save(checkpoint, f"{self.checkpoint_path}/model_{update}.pt")
++                light_checkpoint = dict(ema_model_state_dict=checkpoint["ema_model_state_dict"])
++                self.accelerator.save(light_checkpoint, f"{self.checkpoint_path}/model_{update}.pt")
+                 if self.keep_last_n_checkpoints > 0:
+                     # Updated logic to exclude pretrained model from rotation
+                     checkpoints = [
+@@ -241,7 +242,7 @@ class Trainer:
+                     del checkpoint["model_state_dict"][key]
+ 
+             self.accelerator.unwrap_model(self.model).load_state_dict(checkpoint["model_state_dict"])
+-            self.accelerator.unwrap_model(self.optimizer).load_state_dict(checkpoint["optimizer_state_dict"])
++            self.optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+             if self.scheduler:
+                 self.scheduler.load_state_dict(checkpoint["scheduler_state_dict"])
+             update = checkpoint["update"]
+@@ -258,12 +259,13 @@ class Trainer:
+         gc.collect()
+         return update
+ 
+-    def train(self, train_dataset: Dataset, num_workers=16, resumable_with_seed: int = None):
++    def train(self, train_dataset: Dataset, num_workers=6, resumable_with_seed: int = None):
+         if self.log_samples:
+             from f5_tts.infer.utils_infer import cfg_strength, load_vocoder, nfe_step, sway_sampling_coef
+ 
+             vocoder = load_vocoder(
+-                vocoder_name=self.vocoder_name, is_local=self.is_local_vocoder, local_path=self.local_vocoder_path
++                vocoder_name=self.vocoder_name, is_local=self.is_local_vocoder, local_path=self.local_vocoder_path,
++                device=str(self.accelerator.device),
+             )
+             target_sample_rate = self.accelerator.unwrap_model(self.model).mel_spec.target_sample_rate
+             log_samples_path = f"{self.checkpoint_path}/samples"

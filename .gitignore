@@ -51,8 +51,15 @@ torch_home/
 original/
 dataset/Data/
 f5tts/generated/
+f5tts/compare/
 f5tts/F5-TTS-Vietnamese/
 pipeline/__pycache__/
+
+# --- File nén để mang lên Colab ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
 
 # --- Logs / kết quả tạm ---
 *.log

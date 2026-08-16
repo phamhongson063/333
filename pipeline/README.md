@@ -107,4 +107,6 @@ kill -9 <PID>
 
 nohup caffeinate -i -w 38722 > /dev/null 2>&1 &
 pmset -g assertions | grep caffeinate
+
+cd f5tts/F5-TTS-Vietnamese/data && zip -r ~/your_training_dataset.zip your_training_dataset
 ```
