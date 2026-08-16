@@ -97,10 +97,14 @@ transcribe lại từ đầu.
 ## Learning
 
 ```
+afplay -r 0.85 work/sample/clips/sample_00584.wav
 python f5tts/prepare_dataset.py
 python3 f5tts/monitor_server.py
 bash f5tts/run_paced.sh
 
 ps aux | grep -E "finetune_cli|run_paced|accelerate" | grep -v grep
 kill -9 <PID>
+
+nohup caffeinate -i -w 38722 > /dev/null 2>&1 &
+pmset -g assertions | grep caffeinate
 ```

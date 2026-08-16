@@ -125,7 +125,8 @@
   }
   #tts-text {
     width: 100%;
-    min-height: 110px;
+    margin-top: 14px;
+    min-height: 550px;
     resize: vertical;
     background: var(--bg);
     color: var(--text);
@@ -144,7 +145,6 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-top: 14px;
   }
   #tts-ckpt {
     background: var(--bg);
@@ -234,12 +234,12 @@
   </div>
   <div class="tts-card">
     <h2>Tao audio tu text</h2>
-    <textarea id="tts-text" placeholder="Nhap van ban muon chuyen thanh giong doc..."></textarea>
     <div class="tts-row">
       <select id="tts-ckpt"></select>
       <button id="tts-btn" onclick="generateAudio()">Tao mp3</button>
       <span class="tts-status" id="tts-status">&nbsp;</span>
     </div>
+    <textarea id="tts-text" placeholder="Nhap van ban muon chuyen thanh giong doc..."></textarea>
     <audio id="tts-audio" controls></audio>
   </div>
   <div class="footer" id="load-avg">load avg: -- -- --</div>

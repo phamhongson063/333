@@ -5,6 +5,7 @@ import os
 import re
 import subprocess
 import time
+import wave
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 PORT = 8787
@@ -14,9 +15,10 @@ REPO_DIR = os.path.join(BASE_DIR, "F5-TTS-Vietnamese")
 VENV_PY = os.path.join(BASE_DIR, ".venv", "bin", "f5-tts_infer-cli")
 CKPT_DIR = os.path.join(REPO_DIR, "ckpts", "your_training_dataset")
 VOCAB_FILE = os.path.join(REPO_DIR, "data", "your_training_dataset", "vocab.txt")
-REF_AUDIO = os.path.join(REPO_DIR, "data", "your_training_dataset", "wavs", "sample_00000.wav")
-REF_TEXT = "chào mừng các bạn đến với kênh hoàng vinh radio hôm nay mời các bạn tiếp tục nghe bộ truyện tạc miêu."
+REF_AUDIO = os.path.join(REPO_DIR, "data", "your_training_dataset", "wavs", "sample_00004.wav")
+REF_TEXT = "tình cờ lạc bước vào một ngôi mộ hoang của quý phi đời trước."
 OUTPUT_DIR = os.path.join(BASE_DIR, "generated")
+SENTENCE_GAP = 0.35
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -79,11 +81,11 @@ def list_checkpoints() -> list[dict]:
     numbered.sort(key=lambda x: -x[0])
 
     items = []
-    if os.path.isfile(os.path.join(CKPT_DIR, "model_last.pt")):
-        items.append({"value": "model_last.pt", "label": "moi nhat (model_last.pt)"})
     for update, f in numbered:
         items.append({"value": f, "label": f"update {update}"})
-    if not items and os.path.isfile(os.path.join(CKPT_DIR, "pretrained_vn1000h.pt")):
+    if os.path.isfile(os.path.join(CKPT_DIR, "model_last.pt")):
+        items.append({"value": "model_last.pt", "label": "moi nhat (model_last.pt)"})
+    if os.path.isfile(os.path.join(CKPT_DIR, "pretrained_vn1000h.pt")):
         items.append({"value": "pretrained_vn1000h.pt", "label": "pretrained goc (chua finetune)"})
     return items
 
@@ -93,41 +95,103 @@ def resolve_checkpoint(name: str) -> str:
     path = os.path.join(CKPT_DIR, safe)
     if safe and os.path.isfile(path):
         return path
-    last = os.path.join(CKPT_DIR, "model_last.pt")
-    if os.path.isfile(last):
-        return last
+    options = list_checkpoints()
+    if options:
+        return os.path.join(CKPT_DIR, options[0]["value"])
     return os.path.join(CKPT_DIR, "pretrained_vn1000h.pt")
 
 
+def max_chunk_bytes() -> int:
+    with wave.open(REF_AUDIO) as ref:
+        seconds = ref.getnframes() / ref.getframerate()
+    if seconds >= 22:
+        return len(REF_TEXT.encode("utf-8"))
+    return max(1, int(len(REF_TEXT.encode("utf-8")) / seconds * (22 - seconds)))
+
+
+def pack(pieces: list[str], limit: int) -> list[str]:
+    packed: list[str] = []
+    buffer = ""
+    for piece in pieces:
+        merged = f"{buffer} {piece}".strip()
+        if buffer and len(merged.encode("utf-8")) > limit:
+            packed.append(buffer)
+            buffer = piece
+        else:
+            buffer = merged
+    if buffer:
+        packed.append(buffer)
+    return packed
+
+
+def split_text(text: str, limit: int) -> list[str]:
+    units: list[str] = []
+    for sentence in re.split(r"(?<=[.!?])\s+", text.strip()):
+        if not sentence:
+            continue
+        if len(sentence.encode("utf-8")) <= limit:
+            units.append(sentence)
+        else:
+            units.extend(pack(re.split(r"(?<=[,;:])\s+", sentence), limit))
+    return pack(units, limit) or [text]
+
+
+def join_wavs(sources: list[str], target: str, gap: float) -> None:
+    with wave.open(sources[0]) as first:
+        params = first.getparams()
+    frame_size = params.sampwidth * params.nchannels
+    silence = b"\x00" * (int(gap * params.framerate) * frame_size)
+    with wave.open(target, "wb") as out:
+        out.setparams(params)
+        for position, source in enumerate(sources):
+            if position:
+                out.writeframes(silence)
+            with wave.open(source) as part:
+                out.writeframes(part.readframes(part.getnframes()))
+
+
 def synthesize(text: str, checkpoint_name: str = "") -> tuple[bool, str]:
+    text = text.lower()
     name = f"gen_{int(time.time() * 1000)}"
-    wav_name = f"{name}.wav"
+    wav_path = os.path.join(OUTPUT_DIR, f"{name}.wav")
     mp3_path = os.path.join(OUTPUT_DIR, f"{name}.mp3")
+    checkpoint = resolve_checkpoint(checkpoint_name)
+    parts = split_text(text, max_chunk_bytes())
+    part_paths: list[str] = []
 
-    cmd = [
-        "arch", "-arm64", VENV_PY,
-        "--model", "F5TTS_Base",
-        "--ckpt_file", resolve_checkpoint(checkpoint_name),
-        "--vocab_file", VOCAB_FILE,
-        "--ref_audio", REF_AUDIO,
-        "--ref_text", REF_TEXT,
-        "--gen_text", text,
-        "--vocoder_name", "vocos",
-        "--output_dir", OUTPUT_DIR,
-        "--output_file", wav_name,
-    ]
-    proc = subprocess.run(cmd, capture_output=True, text=True, cwd=REPO_DIR, timeout=600)
-    if proc.returncode != 0:
-        return False, proc.stderr[-4000:]
+    try:
+        for position, part in enumerate(parts):
+            part_name = f"{name}_{position:03d}.wav"
+            cmd = [
+                "arch", "-arm64", VENV_PY,
+                "--model", "F5TTS_Base",
+                "--ckpt_file", checkpoint,
+                "--vocab_file", VOCAB_FILE,
+                "--ref_audio", REF_AUDIO,
+                "--ref_text", REF_TEXT,
+                "--gen_text", part,
+                "--vocoder_name", "vocos",
+                "--output_dir", OUTPUT_DIR,
+                "--output_file", part_name,
+            ]
+            proc = subprocess.run(cmd, capture_output=True, text=True, cwd=REPO_DIR, timeout=600)
+            if proc.returncode != 0:
+                return False, proc.stderr[-4000:]
+            part_paths.append(os.path.join(OUTPUT_DIR, part_name))
 
-    wav_path = os.path.join(OUTPUT_DIR, wav_name)
+        join_wavs(part_paths, wav_path, SENTENCE_GAP)
+    finally:
+        for path in part_paths:
+            if os.path.isfile(path):
+                os.remove(path)
+
     convert = subprocess.run(
         ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", wav_path, mp3_path],
         capture_output=True, text=True,
     )
+    os.remove(wav_path)
     if convert.returncode != 0:
         return False, convert.stderr[-4000:]
-    os.remove(wav_path)
     return True, f"{name}.mp3"
 
 
