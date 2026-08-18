@@ -6,15 +6,23 @@ import wave
 SENTENCE_GAP = 0.35
 SPEED = 0.95
 WINDOW_SECONDS = 22
+MAX_CHUNK_BYTES = 230
 PAUSE_CHARS = ":;-–—()[]"
-DROP_CHARS = "\"'“”‘’«»"
+HARD_BREAK = "\x00"
+DROP_CHARS = "\"'“”‘’«"
 
 
 def prepare_text(text: str) -> str:
+    text = re.sub(r"(\.{2,}|…)(?=\s*$)", ".", text, flags=re.MULTILINE)
+    text = re.sub(r"[ \t]*([.!?])?[ \t]*»",
+                  lambda m: f"{m.group(1) or '.'}{HARD_BREAK}", text)
+    text = re.sub(r"(?m)[ \t]*:[ \t]*$", f".{HARD_BREAK}", text)
+    text = re.sub(r"[ \t]*\n[\s\n]*", HARD_BREAK, text)
     text = text.lower()
     text = text.translate(str.maketrans(PAUSE_CHARS, "," * len(PAUSE_CHARS)))
     text = text.translate({ord(c): None for c in DROP_CHARS})
     text = re.sub(r"\.{2,}|…", ",", text)
+    text = re.sub(r"\s*!+[\s.,!]*", ". ", text)
     text = re.sub(r"\s*,[\s,]*", ", ", text)
     text = re.sub(r",\s*(?=[.!?…])", "", text)
     text = re.sub(r"[ \t]+", " ", text)
@@ -37,16 +45,31 @@ def pack(pieces: list[str], limit: int) -> list[str]:
     return packed
 
 
-def split_text(text: str, limit: int) -> list[str]:
+def demote_inner_questions(chunk: str) -> str:
+    if len(chunk) < 2:
+        return chunk
+    return chunk[:-1].replace("?", ".") + chunk[-1]
+
+
+def pack_sentences(block: str, limit: int) -> list[str]:
     units: list[str] = []
-    for sentence in re.split(r"(?<=[.!?])\s+", text.strip()):
+    for sentence in re.split(r"(?<=[.!?])\s+", block.strip()):
         if not sentence:
             continue
         if len(sentence.encode("utf-8")) <= limit:
             units.append(sentence)
         else:
             units.extend(pack(re.split(r"(?<=[,;:])\s+", sentence), limit))
-    return pack(units, limit) or [text]
+    return pack(units, limit)
+
+
+def split_text(text: str, limit: int) -> list[str]:
+    chunks: list[str] = []
+    for block in text.split(HARD_BREAK):
+        block = block.strip(" \t\n,")
+        if re.search(r"[^\W_]", block):
+            chunks.extend(pack_sentences(block, limit))
+    return [demote_inner_questions(c) for c in chunks] or [text.replace(HARD_BREAK, " ").strip()]
 
 
 def max_chunk_bytes(ref_audio: str, ref_text: str) -> int:
@@ -54,8 +77,9 @@ def max_chunk_bytes(ref_audio: str, ref_text: str) -> int:
         seconds = ref.getnframes() / ref.getframerate()
     ref_bytes = len(ref_text.encode("utf-8"))
     if seconds >= WINDOW_SECONDS:
-        return ref_bytes
-    return max(1, int(ref_bytes / seconds * (WINDOW_SECONDS - seconds)))
+        return min(MAX_CHUNK_BYTES, ref_bytes)
+    window = int(ref_bytes / seconds * (WINDOW_SECONDS - seconds))
+    return max(1, min(MAX_CHUNK_BYTES, window))
 
 
 def join_wavs(sources: list[str], target: str, gap: float = SENTENCE_GAP) -> None:

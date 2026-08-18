@@ -99,6 +99,8 @@ def list_checkpoints() -> list[dict]:
     items = []
     for update, f in numbered:
         items.append({"value": f, "label": f"update {update}"})
+    if os.path.isfile(os.path.join(CKPT_DIR, "model_final.pt")):
+        items.append({"value": "model_final.pt", "label": "final (model_final.pt)"})
     if os.path.isfile(os.path.join(CKPT_DIR, "model_last.pt")):
         items.append({"value": "model_last.pt", "label": "moi nhat (model_last.pt)"})
     if os.path.isfile(os.path.join(CKPT_DIR, "pretrained_vn1000h.pt")):
