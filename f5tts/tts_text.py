@@ -1,7 +1,15 @@
 from __future__ import annotations
 
 import re
+import sys
 import wave
+from pathlib import Path
+
+PIPELINE_DIR = Path(__file__).resolve().parent.parent / "pipeline"
+if PIPELINE_DIR.is_dir():
+    sys.path.append(str(PIPELINE_DIR))
+
+import vi_norm
 
 SENTENCE_GAP = 0.35
 SPEED = 0.95
@@ -10,6 +18,19 @@ MAX_CHUNK_BYTES = 230
 PAUSE_CHARS = ":;-–—()[]"
 HARD_BREAK = "\x00"
 DROP_CHARS = "\"'“”‘’«"
+SHORT_BYTES = 25
+LONG_BYTES = 115
+SHORT_SPEED_RATIO = 0.76
+TEXT_CONFIG = {
+    "le_word": "lẻ",
+    "thousand_word": "nghìn",
+    "four_after_ten": "tư",
+    "decimal_by_digit": True,
+    "spell_unknown_acronyms": True,
+    "lowercase": False,
+    "keep_punctuation": ",.!?…",
+}
+NORMALIZER = vi_norm.build(TEXT_CONFIG)
 
 
 def prepare_text(text: str) -> str:
@@ -54,6 +75,7 @@ def demote_inner_questions(chunk: str) -> str:
 def pack_sentences(block: str, limit: int) -> list[str]:
     units: list[str] = []
     for sentence in re.split(r"(?<=[.!?])\s+", block.strip()):
+        sentence = NORMALIZER(sentence)
         if not sentence:
             continue
         if len(sentence.encode("utf-8")) <= limit:
@@ -70,6 +92,16 @@ def split_text(text: str, limit: int) -> list[str]:
         if re.search(r"[^\W_]", block):
             chunks.extend(pack_sentences(block, limit))
     return [demote_inner_questions(c) for c in chunks] or [text.replace(HARD_BREAK, " ").strip()]
+
+
+def speed_for(chunk: str, base: float = SPEED) -> float:
+    size = len(chunk.encode("utf-8"))
+    if size >= LONG_BYTES:
+        return base
+    if size <= SHORT_BYTES:
+        return base * SHORT_SPEED_RATIO
+    ramp = (size - SHORT_BYTES) / (LONG_BYTES - SHORT_BYTES)
+    return base * (SHORT_SPEED_RATIO + (1 - SHORT_SPEED_RATIO) * ramp)
 
 
 def max_chunk_bytes(ref_audio: str, ref_text: str) -> int:

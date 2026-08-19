@@ -8,7 +8,8 @@ import threading
 import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-from tts_text import SENTENCE_GAP, SPEED, join_wavs, max_chunk_bytes, prepare_text, split_text
+from tts_text import (SENTENCE_GAP, SPEED, join_wavs, max_chunk_bytes, prepare_text,
+                      speed_for, split_text)
 
 PORT = 8787
 BASE_DIR = os.path.dirname(__file__)
@@ -157,7 +158,7 @@ def synthesize(text: str, checkpoint_name: str = "", name: str = "", speed: floa
         job_update(name, state="running", started=time.time())
         for position, part in enumerate(parts):
             part_path = os.path.join(OUTPUT_DIR, f"{name}_{position:03d}.wav")
-            result = ask({"text": part, "out": part_path, "speed": speed})
+            result = ask({"text": part, "out": part_path, "speed": speed_for(part, speed)})
             if not result.get("ok"):
                 return False, result.get("error", "loi khong ro")
             part_paths.append(part_path)
