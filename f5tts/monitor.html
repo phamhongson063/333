@@ -147,7 +147,7 @@
     gap: 10px;
     flex-wrap: wrap;
   }
-  #tts-ckpt {
+  #tts-ckpt, #tts-voice {
     background: var(--bg);
     color: var(--text);
     border: 1px solid var(--track);
@@ -165,7 +165,7 @@
     background-size: 5px 5px, 5px 5px;
     background-repeat: no-repeat;
   }
-  #tts-ckpt:focus {
+  #tts-ckpt:focus, #tts-voice:focus {
     outline: none;
     border-color: var(--accent);
   }
@@ -291,6 +291,7 @@
     <h2>Tao audio tu text</h2>
     <div class="tts-row">
       <select id="tts-ckpt"></select>
+      <select id="tts-voice"></select>
       <div class="stepper">
         <button type="button" onclick="stepSpeed(-0.01)" title="Doc cham hon">&minus;</button>
         <input id="tts-speed" value="0.95" readonly>
@@ -398,12 +399,33 @@ async function loadCheckpoints() {
 loadCheckpoints();
 setInterval(loadCheckpoints, 10000);
 
+async function loadVoices() {
+  const select = document.getElementById('tts-voice');
+  try {
+    const res = await fetch('/voices', { cache: 'no-store' });
+    const data = await res.json();
+    select.innerHTML = '';
+    for (const v of data.voices) {
+      const opt = document.createElement('option');
+      opt.value = v.value;
+      opt.textContent = v.label;
+      select.appendChild(opt);
+    }
+    select.value = data.default;
+  } catch (e) {
+    // im lang, giu nguyen danh sach cu neu loi
+  }
+}
+
+loadVoices();
+
 async function generateAudio() {
   const btn = document.getElementById('tts-btn');
   const status = document.getElementById('tts-status');
   const audio = document.getElementById('tts-audio');
   const text = document.getElementById('tts-text').value.trim();
   const checkpoint = document.getElementById('tts-ckpt').value;
+  const voice = document.getElementById('tts-voice').value;
   const speed = document.getElementById('tts-speed').value;
 
   if (!text) {
@@ -419,7 +441,7 @@ async function generateAudio() {
     const res = await fetch('/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text, checkpoint, speed }),
+      body: JSON.stringify({ text, checkpoint, voice, speed }),
     });
     const data = await res.json();
     if (!data.ok) {

@@ -9,7 +9,7 @@ import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from tts_text import (SENTENCE_GAP, SPEED, join_wavs, max_chunk_bytes, prepare_text,
-                      speed_for, split_text)
+                      speed_for, split_text, wav_to_mp3)
 
 PORT = 8787
 BASE_DIR = os.path.dirname(__file__)
@@ -20,8 +20,21 @@ VENV_PYTHON = os.path.join(BASE_DIR, ".venv", "bin", "python")
 WORKER = os.path.join(BASE_DIR, "tts_worker.py")
 CKPT_DIR = os.path.join(REPO_DIR, "ckpts", "your_training_dataset")
 VOCAB_FILE = os.path.join(REPO_DIR, "data", "your_training_dataset", "vocab.txt")
-REF_AUDIO = os.path.join(REPO_DIR, "data", "your_training_dataset", "wavs", "sample_00004.wav")
-REF_TEXT = "tình cờ lạc bước vào một ngôi mộ hoang của quý phi đời trước."
+REFS_DIR = os.path.join(BASE_DIR, "refs")
+
+
+def load_ref(voice: str) -> tuple[str, str]:
+    audio = os.path.join(REFS_DIR, f"{voice}.wav")
+    with open(os.path.join(REFS_DIR, f"{voice}.txt"), "r", encoding="utf-8") as f:
+        text = f.read().strip()
+    return audio, text
+
+
+VOICES = {
+    "nam": {"label": "Nam"},
+    "nu": {"label": "Nữ"},
+}
+DEFAULT_VOICE = "nam"
 OUTPUT_DIR = os.path.join(BASE_DIR, "generated")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -120,13 +133,15 @@ def resolve_checkpoint(name: str) -> str:
     return os.path.join(CKPT_DIR, "pretrained_vn1000h.pt")
 
 
-def synthesize(text: str, checkpoint_name: str = "", name: str = "", speed: float = SPEED) -> tuple[bool, str]:
+def synthesize(text: str, checkpoint_name: str = "", name: str = "", speed: float = SPEED,
+               voice: str = DEFAULT_VOICE) -> tuple[bool, str]:
     text = prepare_text(text)
     name = name or f"gen_{int(time.time() * 1000)}"
     wav_path = os.path.join(OUTPUT_DIR, f"{name}.wav")
     mp3_path = os.path.join(OUTPUT_DIR, f"{name}.mp3")
     checkpoint = resolve_checkpoint(checkpoint_name)
-    parts = split_text(text, max_chunk_bytes(REF_AUDIO, REF_TEXT))
+    ref_audio, ref_text = load_ref(voice if voice in VOICES else DEFAULT_VOICE)
+    parts = split_text(text, max_chunk_bytes(ref_audio, ref_text))
     part_paths: list[str] = []
     job_update(name, total=len(parts), done=0, state="running", started=time.time())
 
@@ -134,8 +149,8 @@ def synthesize(text: str, checkpoint_name: str = "", name: str = "", speed: floa
         ["arch", "-arm64", VENV_PYTHON, WORKER,
          "--ckpt_file", checkpoint,
          "--vocab_file", VOCAB_FILE,
-         "--ref_audio", REF_AUDIO,
-         "--ref_text", REF_TEXT],
+         "--ref_audio", ref_audio,
+         "--ref_text", ref_text],
         stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
         text=True, cwd=REPO_DIR, bufsize=1,
     )
@@ -178,13 +193,10 @@ def synthesize(text: str, checkpoint_name: str = "", name: str = "", speed: floa
             if os.path.isfile(path):
                 os.remove(path)
 
-    convert = subprocess.run(
-        ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", wav_path, mp3_path],
-        capture_output=True, text=True,
-    )
+    ok, error = wav_to_mp3(wav_path, mp3_path)
     os.remove(wav_path)
-    if convert.returncode != 0:
-        return False, convert.stderr[-4000:]
+    if not ok:
+        return False, error
     return True, f"{name}.mp3"
 
 
@@ -221,6 +233,11 @@ class Handler(BaseHTTPRequestHandler):
 
         if self.path == "/checkpoints":
             self._json(200, {"checkpoints": list_checkpoints()})
+            return
+
+        if self.path == "/voices":
+            voices = [{"value": k, "label": v["label"]} for k, v in VOICES.items()]
+            self._json(200, {"voices": voices, "default": DEFAULT_VOICE})
             return
 
         if self.path.startswith("/progress"):
@@ -284,6 +301,9 @@ class Handler(BaseHTTPRequestHandler):
             payload = json.loads(self.rfile.read(length) or b"{}")
             text = str(payload.get("text", "")).strip()
             checkpoint_name = str(payload.get("checkpoint", "")).strip()
+            voice = str(payload.get("voice", "")).strip()
+            if voice not in VOICES:
+                voice = DEFAULT_VOICE
             if not text:
                 self._json(400, {"ok": False, "error": "thieu text"})
                 return
@@ -295,12 +315,13 @@ class Handler(BaseHTTPRequestHandler):
             speed = min(1.5, max(0.5, speed))
 
             job_id = f"gen_{int(time.time() * 1000)}"
-            parts = split_text(prepare_text(text), max_chunk_bytes(REF_AUDIO, REF_TEXT))
+            ref_audio, ref_text = load_ref(voice)
+            parts = split_text(prepare_text(text), max_chunk_bytes(ref_audio, ref_text))
             job_update(job_id, total=len(parts), done=0, state="running", started=time.time())
 
             def worker() -> None:
                 try:
-                    ok, result = synthesize(text, checkpoint_name, job_id, speed)
+                    ok, result = synthesize(text, checkpoint_name, job_id, speed, voice)
                 except subprocess.TimeoutExpired:
                     job_update(job_id, state="error", error="qua thoi gian cho (10 phut)")
                     return

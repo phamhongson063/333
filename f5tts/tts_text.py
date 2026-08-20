@@ -1,9 +1,13 @@
 from __future__ import annotations
 
+import json
 import re
+import subprocess
 import sys
 import wave
 from pathlib import Path
+
+import numpy as np
 
 PIPELINE_DIR = Path(__file__).resolve().parent.parent / "pipeline"
 if PIPELINE_DIR.is_dir():
@@ -21,6 +25,20 @@ DROP_CHARS = "\"'“”‘’«"
 SHORT_BYTES = 25
 LONG_BYTES = 115
 SHORT_SPEED_RATIO = 0.76
+TAIL_WINDOW = 0.02
+TAIL_DROP_DB = 25.0
+TAIL_FADE_IN = 0.003
+SAMPLE_DTYPES = {1: np.int8, 2: np.int16, 4: np.int32}
+LOUDNESS_LUFS = -14.0
+TRUE_PEAK_DB = -1.5
+LOUDNESS_RANGE = 11.0
+MP3_BITRATE = "64k"
+MEASURED_KEYS = {
+    "input_i": "measured_I",
+    "input_tp": "measured_TP",
+    "input_lra": "measured_LRA",
+    "input_thresh": "measured_thresh",
+}
 TEXT_CONFIG = {
     "le_word": "lẻ",
     "thousand_word": "nghìn",
@@ -114,15 +132,82 @@ def max_chunk_bytes(ref_audio: str, ref_text: str) -> int:
     return max(1, min(MAX_CHUNK_BYTES, window))
 
 
+def ramp_tail(samples: np.ndarray, framerate: int) -> np.ndarray:
+    window = int(TAIL_WINDOW * framerate)
+    count = len(samples) // window if window else 0
+    if count < 2:
+        return samples
+    block = samples[:count * window].reshape(count, window).astype(np.float64)
+    levels = np.sqrt(np.mean(block ** 2, axis=1))
+    peak = levels.max()
+    if peak <= 0:
+        return samples
+    voiced = np.flatnonzero(levels > peak * 10.0 ** (-TAIL_DROP_DB / 20.0))
+    if not len(voiced):
+        return samples
+    shaped = samples.astype(np.float64)
+    start = min((voiced[-1] + 1) * window, len(shaped))
+    if len(shaped) - start > 1:
+        shaped[start:] *= np.linspace(1.0, 0.0, len(shaped) - start) ** 2
+    lead = int(TAIL_FADE_IN * framerate)
+    if lead > 1:
+        shaped[:lead] *= np.linspace(0.0, 1.0, lead)
+    return np.rint(shaped).astype(samples.dtype)
+
+
 def join_wavs(sources: list[str], target: str, gap: float = SENTENCE_GAP) -> None:
     with wave.open(sources[0]) as first:
         params = first.getparams()
     frame_size = params.sampwidth * params.nchannels
     silence = b"\x00" * (int(gap * params.framerate) * frame_size)
+    dtype = SAMPLE_DTYPES.get(params.sampwidth) if params.nchannels == 1 else None
     with wave.open(target, "wb") as out:
         out.setparams(params)
         for position, source in enumerate(sources):
             if position:
                 out.writeframes(silence)
             with wave.open(source) as part:
-                out.writeframes(part.readframes(part.getnframes()))
+                raw = part.readframes(part.getnframes())
+            if dtype is None:
+                out.writeframes(raw)
+                continue
+            out.writeframes(ramp_tail(np.frombuffer(raw, dtype=dtype), params.framerate).tobytes())
+
+
+def measure_loudness(wav_path: str) -> dict:
+    probe = subprocess.run(
+        ["ffmpeg", "-hide_banner", "-nostats", "-i", wav_path,
+         "-af", f"loudnorm=I={LOUDNESS_LUFS}:TP={TRUE_PEAK_DB}:print_format=json",
+         "-f", "null", "-"],
+        capture_output=True, text=True,
+    )
+    blocks = re.findall(r"\{[^{}]*\}", probe.stderr)
+    if not blocks:
+        return {}
+    try:
+        return json.loads(blocks[-1])
+    except json.JSONDecodeError:
+        return {}
+
+
+def loudnorm_filter(wav_path: str) -> str:
+    stats = measure_loudness(wav_path)
+    measured = {name: stats.get(key) for key, name in MEASURED_KEYS.items()}
+    if any(str(value) in ("None", "-inf", "inf", "nan") for value in measured.values()):
+        return ""
+    pairs = ":".join(f"{name}={value}" for name, value in measured.items())
+    return (f"loudnorm=I={LOUDNESS_LUFS}:TP={TRUE_PEAK_DB}:LRA={LOUDNESS_RANGE}"
+            f":{pairs}:linear=true")
+
+
+def wav_to_mp3(wav_path: str, mp3_path: str) -> tuple[bool, str]:
+    with wave.open(wav_path) as source:
+        framerate = source.getframerate()
+    audio_filter = loudnorm_filter(wav_path)
+    convert = subprocess.run(
+        ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", wav_path]
+        + (["-af", audio_filter] if audio_filter else [])
+        + ["-ar", str(framerate), "-b:a", MP3_BITRATE, mp3_path],
+        capture_output=True, text=True,
+    )
+    return convert.returncode == 0, convert.stderr[-4000:]
