@@ -16,7 +16,7 @@ if PIPELINE_DIR.is_dir():
 import vi_norm
 
 SENTENCE_GAP = 0.35
-SPEED = 0.95
+SPEED = 0.85
 WINDOW_SECONDS = 22
 MAX_CHUNK_BYTES = 230
 PAUSE_CHARS = ":;-–—()[]"
